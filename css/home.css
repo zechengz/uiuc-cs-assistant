@@ -8,6 +8,7 @@ html, body {
   position: relative;
   height: 400vh;
   width: 100%;
+  font-family: 'Raleway', sans-serif;
 }
 
 .container1 {
@@ -16,6 +17,7 @@ html, body {
   height: 25%;
   background-color: #262626;
   z-index: 999;
+  font-family: 'Raleway', sans-serif;
 }
 
 #img1 {
@@ -29,50 +31,55 @@ html, body {
   background-size: contain;
 }
 
-.front1 {
-  color: white;
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  @media screen and (max-width: 320px){
-    font-family: 'Raleway', sans-serif;
-  }
-  @media screen and (max-width: 480px) and (min-width: 321px) {
-    font-family: 'Raleway', sans-serif;
-  }
-  @media screen and (max-width: 1023px) and (min-width: 481px) {
-    font-family: 'Raleway', sans-serif;
-  }
-  font-family: 'Raleway', sans-serif;
-  font-size: 70px;
-  @media screen and (max-width: 1920px) and (min-width: 1441px) {
-    font-family: 'Raleway', sans-serif;
+@media screen and (max-width: 320px){
+  .front1 {
+    color: white;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    font-size: 15px;
+    transform: translate(-50%,-50%);
   }
 }
-
-.back1 {
-  color: white;
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  @media screen and (max-width: 320px){
-    font-family: 'Raleway', sans-serif;
+@media screen and (max-width: 480px) and (min-width: 321px) {  
+  .front1 {
+    color: white;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    font-size: 20px;
+    transform: translate(-50%,-50%);
   }
-  @media screen and (max-width: 480px) and (min-width: 321px) {
-    font-family: 'Raleway', sans-serif;
+}
+@media screen and (max-width: 1023px) and (min-width: 481px) {
+  .front1 {
+    color: white;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    font-size: 30px;
+    transform: translate(-50%,-50%);
   }
-  @media screen and (max-width: 1023px) and (min-width: 481px) {
-    font-family: 'Raleway', sans-serif;
+}
+@media screen and (max-width: 1440px) and (min-width: 1024px) {
+  .front1 {
+    color: white;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    font-size: 40px;
+    transform: translate(-50%,-50%);
   }
-  @media screen and (max-width: 1440px) and (min-width: 1024px) {
-    font-family: 'Raleway', sans-serif;
+}
+@media screen and (max-width: 1920px) and (min-width: 1441px) {
+  .front1 {
+    color: white;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    font-size: 50px;
+    transform: translate(-50%,-50%);
   }
-  @media screen and (max-width: 1920px) and (min-width: 1441px) {
-    font-family: 'Raleway', sans-serif;
-  }
-  visibility: hidden;
 }
 
 @media screen and (min-width: 1921px) {
@@ -188,51 +195,55 @@ html, body {
   background-size: contain;
 }
 
-.front2 {
-  color: white;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  @media screen and (max-width: 320px){
-    font-family: 'Raleway', sans-serif;
-  }
-  @media screen and (max-width: 480px) and (min-width: 321px) {
-    font-family: 'Raleway', sans-serif;
-  }
-  @media screen and (max-width: 1023px) and (min-width: 481px) {
-    font-family: 'Raleway', sans-serif;
-  }
-  @media screen and (max-width: 1440px) and (min-width: 1024px) {
-    font-family: 'Raleway', sans-serif;
-  }
-  @media screen and (max-width: 1920px) and (min-width: 1441px) {
-    font-family: 'Raleway', sans-serif;
+@media screen and (max-width: 320px){
+  .front2 {
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 15px;
+    transform: translate(-50%,-50%);
   }
 }
-
-.back2 {
-  color: white;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  @media screen and (max-width: 320px){
-    font-family: 'Raleway', sans-serif;
+@media screen and (max-width: 480px) and (min-width: 321px) {  
+  .front2 {
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 20px;
+    transform: translate(-50%,-50%);
   }
-  @media screen and (max-width: 480px) and (min-width: 321px) {
-    font-family: 'Raleway', sans-serif;
+}
+@media screen and (max-width: 1023px) and (min-width: 481px) {
+  .front2 {
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 30px;
+    transform: translate(-50%,-50%);
   }
-  @media screen and (max-width: 1023px) and (min-width: 481px) {
-    font-family: 'Raleway', sans-serif;
+}
+@media screen and (max-width: 1440px) and (min-width: 1024px) {
+  .front2 {
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 40px;
+    transform: translate(-50%,-50%);
   }
-  @media screen and (max-width: 1440px) and (min-width: 1024px) {
-    font-family: 'Raleway', sans-serif;
+}
+@media screen and (max-width: 1920px) and (min-width: 1441px) {
+  .front2 {
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 50px;
+    transform: translate(-50%,-50%);
   }
-  @media screen and (max-width: 1920px) and (min-width: 1441px) {
-    font-family: 'Raleway', sans-serif;
-  }
-  visibility: hidden;
 }
 
 @media screen and (min-width: 1921px) {
@@ -347,51 +358,55 @@ html, body {
   background-size: contain;
 }
 
-.front3 {
-  color: white;
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  @media screen and (max-width: 320px){
-    font-family: 'Raleway', sans-serif;
-  }
-  @media screen and (max-width: 480px) and (min-width: 321px) {
-    font-family: 'Raleway', sans-serif;
-  }
-  @media screen and (max-width: 1023px) and (min-width: 481px) {
-    font-family: 'Raleway', sans-serif;
-  }
-  @media screen and (max-width: 1440px) and (min-width: 1024px) {
-    font-family: 'Raleway', sans-serif;
-  }
-  @media screen and (max-width: 1920px) and (min-width: 1441px) {
-    font-family: 'Raleway', sans-serif;
+@media screen and (max-width: 320px){
+  .front3 {
+    color: white;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    font-size: 15px;
+    transform: translate(-50%,-50%);
   }
 }
-
-.back3 {
-  color: white;
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  @media screen and (max-width: 320px){
-    font-family: 'Raleway', sans-serif;
+@media screen and (max-width: 480px) and (min-width: 321px) {  
+  .front3 {
+    color: white;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    font-size: 20px;
+    transform: translate(-50%,-50%);
   }
-  @media screen and (max-width: 480px) and (min-width: 321px) {
-    font-family: 'Raleway', sans-serif;
+}
+@media screen and (max-width: 1023px) and (min-width: 481px) {
+  .front3 {
+    color: white;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    font-size: 30px;
+    transform: translate(-50%,-50%);
   }
-  @media screen and (max-width: 1023px) and (min-width: 481px) {
-    font-family: 'Raleway', sans-serif;
+}
+@media screen and (max-width: 1440px) and (min-width: 1024px) {
+  .front3 {
+    color: white;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    font-size: 40px;
+    transform: translate(-50%,-50%);
   }
-  @media screen and (max-width: 1440px) and (min-width: 1024px) {
-    font-family: 'Raleway', sans-serif;
+}
+@media screen and (max-width: 1920px) and (min-width: 1441px) {
+  .front3 {
+    color: white;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    font-size: 50px;
+    transform: translate(-50%,-50%);
   }
-  @media screen and (max-width: 1920px) and (min-width: 1441px) {
-    font-family: 'Raleway', sans-serif;
-  }
-  visibility: hidden;
 }
 
 @media screen and (min-width: 1921px) {
@@ -506,65 +521,288 @@ html, body {
   background-size: contain;
 }
 
-.front4 {
-  color: white;
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  @media screen and (max-width: 320px){
-    font-family: 'Raleway', sans-serif;
+@media screen and (max-width: 320px){
+  .front4 {
+    color: white;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    font-size: 15px;
+    transform: translate(-50%,-50%);
   }
-  @media screen and (max-width: 480px) and (min-width: 321px) {
-    font-family: 'Raleway', sans-serif;
+}
+@media screen and (max-width: 480px) and (min-width: 321px) {  
+  .front4 {
+    color: white;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    font-size: 20px;
+    transform: translate(-50%,-50%);
   }
-  @media screen and (max-width: 1023px) and (min-width: 481px) {
-    font-family: 'Raleway', sans-serif;
+}
+@media screen and (max-width: 1023px) and (min-width: 481px) {
+  .front4 {
+    color: white;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    font-size: 30px;
+    transform: translate(-50%,-50%);
   }
-  @media screen and (max-width: 1440px) and (min-width: 1024px) {
-    font-family: 'Raleway', sans-serif;
+}
+@media screen and (max-width: 1440px) and (min-width: 1024px) {
+  .front4 {
+    color: white;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    font-size: 40px;
+    transform: translate(-50%,-50%);
   }
-  @media screen and (max-width: 1920px) and (min-width: 1441px) {
-    font-family: 'Raleway', sans-serif;
+}
+@media screen and (max-width: 1920px) and (min-width: 1441px) {
+  .front4 {
+    color: white;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    font-size: 50px;
+    transform: translate(-50%,-50%);
   }
 }
 
-.back4 {
-  color: white;
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  @media screen and (max-width: 320px){
-    font-family: 'Raleway', sans-serif;
-  }
-  @media screen and (max-width: 480px) and (min-width: 321px) {
-    font-family: 'Raleway', sans-serif;
-  }
-  @media screen and (max-width: 1023px) and (min-width: 481px) {
-    font-family: 'Raleway', sans-serif;
-  }
-  @media screen and (max-width: 1440px) and (min-width: 1024px) {
-    font-family: 'Raleway', sans-serif;
-  }
-  @media screen and (max-width: 1920px) and (min-width: 1441px) {
-    font-family: 'Raleway', sans-serif;
-  }
-  visibility: hidden;
+@media screen and (min-width: 1921px) {
+  width: 400px;
+  height: 120px;
 }
 
-#startButton {
-  position: absolute;
-  top: 95.5%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  font: 150% $rw;
-  @media screen and (min-width: 1921px) {
-    width: 400px;
-    height: 120px;
+@media screen and (max-width: 1920px) and (min-width: 1281px) {
+  #startButton {
+    width: 280px;
+    height: 140px;
+    font-size:45px;
+    background: -webkit-linear-gradient(top, #DD4B39, #D14836); 
+    background: -moz-linear-gradient(top, #DD4B39, #D14836); 
+    background: -ms-linear-gradient(top, #DD4B39, #D14836); 
+    border: 1px solid #DD4B39;
+    color: white;
+    text-shadow: 0 1px 0 #C04131;
+    position: absolute;
+    top: 95.25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
   }
-  @media screen and (max-width: 1920px) and (min-width: 1281px) {
-    width: 300px;
-    height: 100px;
+
+  #startButton:hover {
+    width: 280px;
+    height: 140px;
+    font-size:45px;
+    background: -webkit-linear-gradient(top, #DD4B39, #C53727);
+    background: -moz-linear-gradient(top, #DD4B39, #C53727);
+    background: -ms-linear-gradient(top, #DD4B39, #C53727);
+    border: 1px solid #AF301F;
+    position: absolute;
+    top: 95.25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  #startButton:active {
+    width: 280px;
+    height: 140px;
+    font-size:45px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.2);
+    background: -webkit-linear-gradient(top, #D74736, #AD2719);
+    background: -moz-linear-gradient(top, #D74736, #AD2719);
+    background: -ms-linear-gradient(top, #D74736, #AD2719);
+    position: absolute;
+    top: 95.25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+@media screen and (max-width: 1280px) and (min-width: 1024px) {
+  #startButton {
+    font-size: 28px;
+    width: 180px;
+    height: 70px;
+    background: -webkit-linear-gradient(top, #DD4B39, #D14836); 
+    background: -moz-linear-gradient(top, #DD4B39, #D14836); 
+    background: -ms-linear-gradient(top, #DD4B39, #D14836); 
+    border: 1px solid #DD4B39;
+    color: white;
+    text-shadow: 0 1px 0 #C04131;
+    position: absolute;
+    top: 95.25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  #startButton:hover {
+    font-size: 28px;
+    width: 180px;
+    height: 70px;
+    background: -webkit-linear-gradient(top, #DD4B39, #C53727);
+    background: -moz-linear-gradient(top, #DD4B39, #C53727);
+    background: -ms-linear-gradient(top, #DD4B39, #C53727);
+    border: 1px solid #AF301F;
+    position: absolute;
+    top: 95.25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  #startButton:active {
+    font-size: 28px;
+    width: 180px;
+    height: 70px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.2);
+    background: -webkit-linear-gradient(top, #D74736, #AD2719);
+    background: -moz-linear-gradient(top, #D74736, #AD2719);
+    background: -ms-linear-gradient(top, #D74736, #AD2719);
+    position: absolute;
+    top: 95.25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  #startButton {
+    font-size: 25px;
+    width: 160px;
+    height: 70px;
+    background: -webkit-linear-gradient(top, #DD4B39, #D14836); 
+    background: -moz-linear-gradient(top, #DD4B39, #D14836); 
+    background: -ms-linear-gradient(top, #DD4B39, #D14836); 
+    border: 1px solid #DD4B39;
+    color: white;
+    text-shadow: 0 1px 0 #C04131;
+    position: absolute;
+    top: 95.25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  #startButton:hover {
+    font-size: 25px;
+    width: 160px;
+    height: 70px;
+    background: -webkit-linear-gradient(top, #DD4B39, #C53727);
+    background: -moz-linear-gradient(top, #DD4B39, #C53727);
+    background: -ms-linear-gradient(top, #DD4B39, #C53727);
+    border: 1px solid #AF301F;
+    position: absolute;
+    top: 95.25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  #startButton:active {
+    font-size: 25px;
+    width: 160px;
+    height: 70px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.2);
+    background: -webkit-linear-gradient(top, #D74736, #AD2719);
+    background: -moz-linear-gradient(top, #D74736, #AD2719);
+    background: -ms-linear-gradient(top, #D74736, #AD2719);
+    position: absolute;
+    top: 95.25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 414px) {
+  #startButton {
+    font-size: 20px;
+    width: 140px;
+    height: 50px;
+    background: -webkit-linear-gradient(top, #DD4B39, #D14836); 
+    background: -moz-linear-gradient(top, #DD4B39, #D14836); 
+    background: -ms-linear-gradient(top, #DD4B39, #D14836); 
+    border: 1px solid #DD4B39;
+    color: white;
+    text-shadow: 0 1px 0 #C04131;
+    position: absolute;
+    top: 95.25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  #startButton:hover {
+    font-size: 20px;
+    width: 140px;
+    height: 50px;
+    background: -webkit-linear-gradient(top, #DD4B39, #C53727);
+    background: -moz-linear-gradient(top, #DD4B39, #C53727);
+    background: -ms-linear-gradient(top, #DD4B39, #C53727);
+    border: 1px solid #AF301F;
+    position: absolute;
+    top: 95.25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  #startButton:active {
+    font-size: 20px;
+    width: 140px;
+    height: 50px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.2);
+    background: -webkit-linear-gradient(top, #D74736, #AD2719);
+    background: -moz-linear-gradient(top, #D74736, #AD2719);
+    background: -ms-linear-gradient(top, #D74736, #AD2719);
+    position: absolute;
+    top: 95.25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+@media screen and (max-width: 413px) and (min-width: 350px) {
+  #startButton {
+    font-size: 18px;
+    width: 130px;
+    height: 40px;
+    background: -webkit-linear-gradient(top, #DD4B39, #D14836); 
+    background: -moz-linear-gradient(top, #DD4B39, #D14836); 
+    background: -ms-linear-gradient(top, #DD4B39, #D14836); 
+    border: 1px solid #DD4B39;
+    color: white;
+    text-shadow: 0 1px 0 #C04131;
+    position: absolute;
+    top: 95.25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  #startButton:hover {
+    font-size: 18px;
+    width: 130px;
+    height: 40px;
+    background: -webkit-linear-gradient(top, #DD4B39, #C53727);
+    background: -moz-linear-gradient(top, #DD4B39, #C53727);
+    background: -ms-linear-gradient(top, #DD4B39, #C53727);
+    border: 1px solid #AF301F;
+    position: absolute;
+    top: 95.25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  #startButton:active {
+    font-size: 18px;
+    width: 130px;
+    height: 40px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.2);
+    background: -webkit-linear-gradient(top, #D74736, #AD2719);
+    background: -moz-linear-gradient(top, #D74736, #AD2719);
+    background: -ms-linear-gradient(top, #D74736, #AD2719);
+    position: absolute;
+    top: 95.25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
   }
 }

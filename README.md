@@ -1,2 +1,10 @@
-# CS411Project
-Spring 2018 CS411 Final Project
+# __Spring 2018 CS 411Project__
+## __Poject Name__: UIUC CS Assistant
+### __Group Members__:
+* Zecheng Zhang
+* Jason Situ
+* Yuxin Xiao
+* Linzi Meng
+### __Link__:
+[UIUC Wiki page for our goup](https://wiki.illinois.edu/wiki/display/cs411sp18/Head_of_CS_Department)
+

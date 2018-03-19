@@ -7,4 +7,4 @@
 * Linzi Meng
 ### __Link__:
 [UIUC Wiki Page](https://wiki.illinois.edu/wiki/display/cs411sp18/Head_of_CS_Department)
-
+[Host Website](http://csassistant.web.engr.illinois.edu/)

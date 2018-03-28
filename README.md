@@ -1,5 +1,5 @@
-# CS498RK-Project
-2017 Fall CS498 RK Project - Fake Engineers
+# CS411-Project
+2018 Spring CS411 Project - Fake Engineers
 
 ## Setup Guide
 1. Install node modules (at least once): `npm install`

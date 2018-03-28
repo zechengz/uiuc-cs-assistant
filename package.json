@@ -1,7 +1,7 @@
 {
-  "name": "CS-498-Final-Project",
+  "name": "CS-411-Project",
   "version": "1.0.0",
-  "description": "CS 498 Web Programming Final Project - Fake Engineers",
+  "description": "CS 411 Project - Fake Engineers",
   "main": "index.jsx",
   "scripts": {
     "watch": "webpack -d --watch",
@@ -63,6 +63,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/RagnaroWA/CS498RK-Project.git"
+    "url": "https://github.com/RagnaroWA/CS411Project.git"
   }
 }

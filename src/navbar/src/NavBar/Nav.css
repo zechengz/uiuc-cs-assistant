@@ -1,0 +1,92 @@
+:root {
+    --color1: #78C2C3;
+    --color2: #b00;
+}
+
+.App {
+
+}
+
+.NavBar{
+  position: relative;
+  height: 100px;
+  opacity: 0.5;
+}
+
+/* header element style */
+#navHeader {
+  background-color: var(--color1);
+  height: 40px;
+  padding: 20px;
+  color: white;
+  position: relative;
+}
+
+/* Fake Engineer logo style */
+.App-logo {
+  height: 60px;
+  left: 10%;
+  top: 50%;
+  transform:
+    translate(-50%, -50%);
+  position: absolute;
+
+}
+
+/* Fake Engineer text style */
+.NavTitle{
+  left: 25%;
+  top: 20%;
+  transform:
+    translate(-50%, -50%);
+  position: absolute;
+}
+
+/* search bar style */
+#navSearch{
+  left: 45%;
+  top: 40%;
+  transform:
+    translate(-50%, -50%);
+  position: absolute;
+}
+
+/* sample user style */
+#navAvatar{
+  left: 70%;
+  top: 50%;
+  transform:
+    translate(-50%, -50%);
+  position: absolute;
+}
+
+/* notifcication button style */
+.NF{
+  left: 70%;
+  top: 50%;
+  transform:
+    translate(0%, -50%);
+  position: absolute;
+}
+
+/* notifcication button style */
+#navCD{
+  left: 87%;
+  top: 50%;
+  transform:
+    translate(-50%, -50%);
+  position: absolute;
+  color: black;
+}
+
+/* search button style */
+
+.NavSearchButton{
+  left: 50%;
+  top: 50%;
+  transform:
+    translate(-50%, -50%);
+  position: absolute;
+
+}
+

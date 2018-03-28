@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+$spacing-length: 2em;
+$main-color: #E1F5FE;
+$color-1: #D52349;
+$color-2: #252122;
+$color-3: #827A7C;
+$color-4: #F7F7F7;
+$color-5: #0FC9E7;
+
+// temporary menu bar
+.UserStatus {
+
+  // background-color: #EFEFEF; // should be a different place
+
+  margin: 36px auto !important;
+  width: 100% !important;
+  max-width: 1100px !important;
+
+  .MuiAppBar-root-1{
+    background-color: $color-2;
+  }
+
+  .menu-flex {
+    flex: 1;
+  }
+  @media (max-width: 960px) {
+
+  }
+
+  @media only screen and (max-width: 767px) {
+    .main-section,
+    .SidePanel {
+      padding: 0 !important;
+      transition: width 2s ease;
+    }
+
+    // this might not the right place
+    .main-section {
+      padding: 0;
+    }
+
+    > .SidePanel {
+      display: flex;
+      flex-direction: column;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+}

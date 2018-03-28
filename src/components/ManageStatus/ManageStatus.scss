@@ -1,0 +1,85 @@
+$color-1: #D52349;
+$color-2: #252122;
+$color-3: #827A7C;
+$color-4: #F7F7F7;
+$color-5: #0FC9E7;
+
+$plan-semester-chip-color-A: rgba(30,87,153,1);
+$plan-semester-chip-color-B: rgb(230, 126, 34);
+
+.ManageStatus {
+  margin: 0 auto;
+  max-width: 800px;
+
+  .plan-title {
+    color: white;
+    background: $color-1;
+    padding: 0.5em 0.85em;
+    position: relative;
+
+    button {
+      position: absolute;
+      top: 50%;
+      right: 1em;
+      transform: translateY(-50%);
+      color: white;
+      background-color: #e2506f;
+    }
+  } // end .plan-title
+
+  .plan-list {
+
+    padding-top: 0;
+
+    .plan-semester {
+      position: relative;
+      box-sizing: border-box;
+
+      &:nth-child(odd) {
+        background-color: rgb(230, 126, 34);
+        background: linear-gradient(135deg, rgba(91,202,255,1) 0%, rgba(85,239,203,1) 0%,rgba(85,239,203,1) 0%, rgba(30,87,153,1) 100%);
+
+        .plan-semester-chip {
+          color: #f0f0f0;
+          background-color: #5594dd;
+        }
+      }
+
+      &:nth-child(even) {
+        background: linear-gradient(135deg, #f7bb97 0%, #de6262 100%);
+
+        .plan-semester-chip {
+          color: white;
+          // background-color: #edabab;
+          background-color: #e99696;
+        }
+      }
+
+      .plan-semester-courses {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .semester-delete-btn {
+        position: absolute;
+        top: 3%;
+        right: 1.5%;
+        width: 20px;
+        height: 20px;
+        min-height: 0;
+        @media only screen and (max-width: 767px) {
+          width: 38px;
+          height: 30px;
+        }
+        svg {
+          height: 16px;
+          width: 16px;
+          @media only screen and (max-width: 767px) {
+            width: 22px;
+            height: 22px;
+          }
+        }
+      }
+    } // end .plan-semester
+  } // end .plan-list
+}

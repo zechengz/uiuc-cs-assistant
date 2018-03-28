@@ -1,0 +1,122 @@
+$spacing-length: 2em;
+$main-color: #E1F5FE;
+$color-1: #D52349;
+$color-2: #252122;
+$color-3: #827A7C;
+$color-4: #F7F7F7;
+$color-5: #0FC9E7;
+
+$plan-semester-chip-color-A: white;
+$plan-semester-chip-color-B: rgb(230, 126, 34);
+
+$font-size-767: 1.5em;
+
+
+.Plan {
+  color: white;
+
+  .section-title {
+    color: white;
+    background: $color-1;
+    padding: 0.5em 0.85em;
+
+    @media only screen and (max-width: 767px) {
+      font-size: $font-size-767;
+    }
+  } // end .section-title
+
+  .plan-list {
+    padding-top: 0;
+    padding-bottom: 0;
+    list-style: decimal;
+
+    .plan-item {
+      color: white;
+      position: relative;
+      box-sizing: border-box;
+
+      animation-duration: 1.25s;
+      animation-fill-mode: forwards; // maintain in final state
+      opacity: 0;
+
+      @keyframes fade_in_and_move_left {
+        0% {
+          opacity: 0;
+          right: -20%;
+        }
+
+        100% {
+          opacity: 1;
+          right: 0;
+        }
+      }
+
+      @keyframes fade_in_and_move_right {
+        0% {
+          opacity: 0;
+          left: -20%;
+        }
+
+        100% {
+          opacity: 1;
+          left: 0;
+        }
+      }
+
+      &:nth-child(odd) {
+        animation-delay: .5s;
+        background: linear-gradient(135deg, #f7bb97 0%, #de6262 100%);
+        animation-name: fade_in_and_move_right;
+
+        .plan-semester-chip {
+          background-color: #e99696;
+          color: $plan-semester-chip-color-A;
+        } // end .plan-semester-chip
+      }
+
+      &:nth-child(even) {
+        // border: 3px solid $color-5;
+        // background-color: rgb(241, 196, 15);
+        background: linear-gradient(135deg, rgba(91,202,255,1) 0%, rgba(85,239,203,1) 0%,rgba(85,239,203,1) 0%, rgba(30,87,153,1) 100%);
+        animation-delay: .5s;
+        animation-name: fade_in_and_move_left;
+
+        .plan-semester-chip {
+          background-color: #5594dd;
+          // background-color: #aacaee;
+          // color: $plan-semester-chip-color-B;
+          // color: lightgray;
+          color: #f0f0f0;
+        } // end .plan-semester-chip
+      }
+
+      .plan-text {
+        * {
+          color: white;
+        }
+      } // end .plan-text
+
+      .plan-semester-chip {
+
+      } // end .plan-semester-chip
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      .plan-course-list {
+
+        display: flex;
+        flex-direction: row;
+        padding-top: 0;
+        padding-bottom: 0;
+        overflow-x: scroll;
+
+        .plan-course {
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+      } // end .plan-course-list
+    } // end .plan-item
+  } // end .plan-list
+} // end .plan

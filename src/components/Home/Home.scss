@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+$rw: Raleway, sans-serif;
+
+.Home {
+    position: relative;
+    height: 400vh;
+    width: 100%;
+
+    .LoginButton {
+        position: fixed;
+        z-index: 1000000 !important;
+        top: 2.5%;
+        right: 2%;
+        // @media screen and (max-width: 360px) and (min-width: 320px){
+        //     left: 48vw;
+        //     top: 4vw;
+        // }
+        // @media screen and (max-width: 414px) and (min-width: 360px){
+        //     left: 55vw;
+        //     top: 4vw;
+        // }
+        // @media screen and (max-width: 768px) and (min-width: 415px){
+        //     left: 75vw;
+        //     top: 4vw;
+        // }
+        // @media screen and (max-width: 1024px) and (min-width: 769px){
+        //     left: 78vw;
+        //     top: 4vw;
+        // }
+        // @media screen and (max-width: 1366px) and (min-width: 1024px){
+        //     left: 83vw;
+        //     top: 3vw;
+        // }
+        // @media screen and (max-width: 2048px) and (min-width: 1366px){
+        //     left: 90vw;
+        //     top: 2vw;
+        //     height: 70px;
+        //     width: 150px;
+        // }
+        // @media screen and (max-width: 3840px) and (min-width: 2049px){
+        //     left: 93vw;
+        //     top: 1.5vw;
+        //     height: 100px;
+        //     width: 200px;
+        // }
+        opacity: 0.9 !important;
+    }
+
+    .container1 {
+        top: 0;
+        width: 100%;
+        height: 25%;
+        background-color: #262626;
+        z-index: 999;
+
+        #img1 {
+            position: absolute;
+            top: 4%;
+            left: 50%;
+            width: 30vh;
+            height: 30vh;
+            transform: translateX(-50%);
+            background: url('assets/icon1.png') no-repeat;
+            background-size: contain;
+        }
+        .front {
+            color: white;
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            @media screen and (max-width: 320px){
+                font: 100% $rw;
+            }
+            @media screen and (max-width: 480px) and (min-width: 321px) {
+                font: 120% $rw;
+            }
+            @media screen and (max-width: 1023px) and (min-width: 481px) {
+                font: 200% $rw;
+            }
+            @media screen and (max-width: 1440px) and (min-width: 1024px) {
+                font: 220% $rw;
+            }
+            @media screen and (max-width: 1920px) and (min-width: 1441px) {
+                font: 250% $rw;
+            }
+            @media screen and (max-width: 2048px) and (min-width: 1921px) {
+                font: 300% $rw;
+            }
+            @media screen and (max-width: 3840px) and (min-width: 2049px) {
+                font: 400% $rw;
+            }
+        }
+        .back {
+            color: white;
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            @media screen and (max-width: 320px){
+                font: 100% $rw;
+            }
+            @media screen and (max-width: 480px) and (min-width: 321px) {
+                font: 120% $rw;
+            }
+            @media screen and (max-width: 1023px) and (min-width: 481px) {
+                font: 200% $rw;
+            }
+            @media screen and (max-width: 1440px) and (min-width: 1024px) {
+                font: 220% $rw;
+            }
+            @media screen and (max-width: 1920px) and (min-width: 1441px) {
+                font: 250% $rw;
+            }
+            @media screen and (max-width: 2048px) and (min-width: 1921px) {
+                font: 300% $rw;
+            }
+            @media screen and (max-width: 3840px) and (min-width: 2049px) {
+                font: 400% $rw;
+            }
+            visibility: hidden;
+        }
+        #down1 {
+            position: absolute;
+            top: 20.5%;
+            left: 50%;
+            @media screen and (min-width: 1921px) {
+                width: 130px;
+                height: 130px;
+            }
+            @media screen and (max-width: 1920px) and (min-width: 1281px) {
+                width: 100px;
+                height: 100px;
+            }
+            @media screen and (max-width: 1280px) and (min-width: 0px) {
+                width: 50px;
+                height: 50px;
+            }
+            transform: translate(-50%,-50%);
+            background: url('assets/down1.png') no-repeat;
+            background-size: contain;
+            -webkit-transition: all 200ms ease-out;
+            -ms-transition: all 200ms ease-out;
+            -moz-transition: all 200ms ease-out;
+            transition: all 200ms ease-out;
+        }
+
+        #down1:hover {
+            position: absolute;
+            top: 20.5%;
+            left: 50%;
+            @media screen and (min-width: 1921px) {
+                width: 160px;
+                height: 160px;
+            }
+            @media screen and (max-width: 1920px) and (min-width: 1281px) {
+                width: 130px;
+                height: 130px;
+            }
+            @media screen and (max-width: 1280px) and (min-width: 0px) {
+                width: 80px;
+                height: 80px;
+            }
+            transform: translate(-50%,-50%);
+            background: url('assets/down1.png') no-repeat;
+            background-size: contain;
+            -webkit-transition: all 200ms ease-in;
+            -ms-transition: all 200ms ease-in;
+            -moz-transition: all 200ms ease-in;
+            transition: all 200ms ease-in;
+        }
+    }
+    .container2 {
+        top: 100%;
+        width: 100%;
+        height: 25%;
+        background-color: #1BBC9B;
+
+        #img2 {
+            position: absolute;
+            top: 29%;
+            left: 50%;
+            width: 30vh;
+            height: 30vh;
+            transform: translateX(-50%);
+            background: url('assets/icon2.png') no-repeat;
+            background-size: contain;
+        }
+        .front {
+            color: white;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            @media screen and (max-width: 320px){
+                font: 100% $rw;
+            }
+            @media screen and (max-width: 480px) and (min-width: 321px) {
+                font: 120% $rw;
+            }
+            @media screen and (max-width: 1023px) and (min-width: 481px) {
+                font: 200% $rw;
+            }
+            @media screen and (max-width: 1440px) and (min-width: 1024px) {
+                font: 220% $rw;
+            }
+            @media screen and (max-width: 1920px) and (min-width: 1441px) {
+                font: 250% $rw;
+            }
+            @media screen and (max-width: 2048px) and (min-width: 1921px) {
+                font: 300% $rw;
+            }
+            @media screen and (max-width: 3840px) and (min-width: 2049px) {
+                font: 400% $rw;
+            }
+        }
+        .back {
+            color: white;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            @media screen and (max-width: 320px){
+                font: 100% $rw;
+            }
+            @media screen and (max-width: 480px) and (min-width: 321px) {
+                font: 120% $rw;
+            }
+            @media screen and (max-width: 1023px) and (min-width: 481px) {
+                font: 200% $rw;
+            }
+            @media screen and (max-width: 1440px) and (min-width: 1024px) {
+                font: 220% $rw;
+            }
+            @media screen and (max-width: 1920px) and (min-width: 1441px) {
+                font: 250% $rw;
+            }
+            @media screen and (max-width: 2048px) and (min-width: 1921px) {
+                font: 300% $rw;
+            }
+            @media screen and (max-width: 3840px) and (min-width: 2049px) {
+                font: 400% $rw;
+            }
+            visibility: hidden;
+        }
+        #down2 {
+            position: absolute;
+            top: 45.5%;
+            left: 50%;
+            @media screen and (min-width: 1921px) {
+                width: 130px;
+                height: 130px;
+            }
+            @media screen and (max-width: 1920px) and (min-width: 1281px) {
+                width: 100px;
+                height: 100px;
+            }
+            @media screen and (max-width: 1280px) and (min-width: 0px) {
+                width: 50px;
+                height: 50px;
+            }
+            transform: translate(-50%,-50%);
+            background: url('assets/down2.png') no-repeat;
+            background-size: contain;
+            -webkit-transition: all 200ms ease-out;
+            -ms-transition: all 200ms ease-out;
+            -moz-transition: all 200ms ease-out;
+            transition: all 200ms ease-out;
+        }
+
+        #down2:hover {
+            position: absolute;
+            top: 45.5%;
+            left: 50%;
+            @media screen and (min-width: 1921px) {
+                width: 160px;
+                height: 160px;
+            }
+            @media screen and (max-width: 1920px) and (min-width: 1281px) {
+                width: 130px;
+                height: 130px;
+            }
+            @media screen and (max-width: 1280px) and (min-width: 0px) {
+                width: 80px;
+                height: 80px;
+            }
+            transform: translate(-50%,-50%);
+            background: url('assets/down2.png') no-repeat;
+            background-size: contain;
+            -webkit-transition: all 200ms ease-in;
+            -ms-transition: all 200ms ease-in;
+            -moz-transition: all 200ms ease-in;
+            transition: all 200ms ease-in;
+        }
+    }
+    .container3 {
+        top: 200%;
+        width: 100%;
+        height: 25%;
+        background-color: #76C3F1;
+        #img3 {
+            position: absolute;
+            top: 54%;
+            left: 50%;
+            width: 30vh;
+            height: 30vh;
+            transform: translateX(-50%);
+            background: url('assets/icon3.png') no-repeat;
+            background-size: contain;
+        }
+        .front {
+            color: black;
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            @media screen and (max-width: 320px){
+                font: 100% $rw;
+            }
+            @media screen and (max-width: 480px) and (min-width: 321px) {
+                font: 120% $rw;
+            }
+            @media screen and (max-width: 1023px) and (min-width: 481px) {
+                font: 200% $rw;
+            }
+            @media screen and (max-width: 1440px) and (min-width: 1024px) {
+                font: 220% $rw;
+            }
+            @media screen and (max-width: 1920px) and (min-width: 1441px) {
+                font: 250% $rw;
+            }
+            @media screen and (max-width: 2048px) and (min-width: 1921px) {
+                font: 300% $rw;
+            }
+            @media screen and (max-width: 3840px) and (min-width: 2049px) {
+                font: 400% $rw;
+            }
+        }
+        .back {
+            color: black;
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            @media screen and (max-width: 320px){
+                font: 100% $rw;
+            }
+            @media screen and (max-width: 480px) and (min-width: 321px) {
+                font: 120% $rw;
+            }
+            @media screen and (max-width: 1023px) and (min-width: 481px) {
+                font: 200% $rw;
+            }
+            @media screen and (max-width: 1440px) and (min-width: 1024px) {
+                font: 220% $rw;
+            }
+            @media screen and (max-width: 1920px) and (min-width: 1441px) {
+                font: 250% $rw;
+            }
+            @media screen and (max-width: 2048px) and (min-width: 1921px) {
+                font: 300% $rw;
+            }
+            @media screen and (max-width: 3840px) and (min-width: 2049px) {
+                font: 400% $rw;
+            }
+            visibility: hidden;
+        }
+        #down3 {
+            position: absolute;
+            top: 70.5%;
+            left: 50%;
+            @media screen and (min-width: 1921px) {
+                width: 130px;
+                height: 130px;
+            }
+            @media screen and (max-width: 1920px) and (min-width: 1281px) {
+                width: 100px;
+                height: 100px;
+            }
+            @media screen and (max-width: 1280px) and (min-width: 0px) {
+                width: 50px;
+                height: 50px;
+            }
+            transform: translate(-50%,-50%);
+            background: url('assets/down3.png') no-repeat;
+            background-size: contain;
+            -webkit-transition: all 200ms ease-out;
+            -ms-transition: all 200ms ease-out;
+            -moz-transition: all 200ms ease-out;
+            transition: all 200ms ease-out;
+        }
+
+        #down3:hover {
+            position: absolute;
+            top: 70.5%;
+            left: 50%;
+            @media screen and (min-width: 1921px) {
+                width: 160px;
+                height: 160px;
+            }
+            @media screen and (max-width: 1920px) and (min-width: 1281px) {
+                width: 130px;
+                height: 130px;
+            }
+            @media screen and (max-width: 1280px) and (min-width: 0px) {
+                width: 80px;
+                height: 80px;
+            }
+            transform: translate(-50%,-50%);
+            background: url('assets/down3.png') no-repeat;
+            background-size: contain;
+            -webkit-transition: all 200ms ease-in;
+            -ms-transition: all 200ms ease-in;
+            -moz-transition: all 200ms ease-in;
+            transition: all 200ms ease-in;
+        }
+    }
+    .container4 {
+        top: 300%;
+        width: 100%;
+        height: 25%;
+        background-color: #EF922B;
+        #img4 {
+            position: absolute;
+            top: 79%;
+            left: 50%;
+            width: 30vh;
+            height: 30vh;
+            transform: translateX(-50%);
+            background: url('assets/icon4.png') no-repeat;
+            background-size: contain;
+        }
+        .front {
+            color: black;
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            @media screen and (max-width: 320px){
+                font: 100% $rw;
+            }
+            @media screen and (max-width: 480px) and (min-width: 321px) {
+                font: 120% $rw;
+            }
+            @media screen and (max-width: 1023px) and (min-width: 481px) {
+                font: 200% $rw;
+            }
+            @media screen and (max-width: 1440px) and (min-width: 1024px) {
+                font: 220% $rw;
+            }
+            @media screen and (max-width: 1920px) and (min-width: 1441px) {
+                font: 250% $rw;
+            }
+            @media screen and (max-width: 2048px) and (min-width: 1921px) {
+                font: 300% $rw;
+            }
+            @media screen and (max-width: 3840px) and (min-width: 2049px) {
+                font: 400% $rw;
+            }
+        }
+        .back {
+            color: black;
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            @media screen and (max-width: 320px){
+                font: 100% $rw;
+            }
+            @media screen and (max-width: 480px) and (min-width: 321px) {
+                font: 120% $rw;
+            }
+            @media screen and (max-width: 1023px) and (min-width: 481px) {
+                font: 200% $rw;
+            }
+            @media screen and (max-width: 1440px) and (min-width: 1024px) {
+                font: 220% $rw;
+            }
+            @media screen and (max-width: 1920px) and (min-width: 1441px) {
+                font: 250% $rw;
+            }
+            @media screen and (max-width: 2048px) and (min-width: 1921px) {
+                font: 300% $rw;
+            }
+            @media screen and (max-width: 3840px) and (min-width: 2049px) {
+                font: 400% $rw;
+            }
+            visibility: hidden;
+        }
+        #startButton {
+            position: absolute;
+            top: 95.5%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font: 150% $rw;
+            text-align: center;
+            @media screen and (min-width: 1921px) {
+                width: 400px;
+                height: 120px;
+            }
+            @media screen and (max-width: 1920px) and (min-width: 1281px) {
+                width: 300px;
+                height: 100px;
+            }
+        }
+    }
+}

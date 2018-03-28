@@ -1,0 +1,194 @@
+$themeColor: #D52349;
+$backgroundColor: #f7f7f7;
+$color-gray: #827A7C;
+$color-black: #252122;
+//$backgroundColor: red;
+$MaterialDefaultFont: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+	background-color: $backgroundColor;
+}
+
+.profileOutline {
+	max-width: 1440px;
+	margin: 24px auto;
+
+	.profileOutGrid {
+		width: 100%;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+}
+
+.sectionList {
+	list-style-type: none;
+	margin-top: -10px;
+	padding: 0; // problem of list style
+}
+
+.item {
+	.profileText {
+		display: block;
+		overflow: hidden;
+		overflow-wrap: break-word;
+
+		h3 {
+			font: 100% 'Raleway';
+		}
+		p {
+			font: 120% 'Raleway'
+		}
+	}
+}
+
+.sectionTitle {
+	margin-top: 0;
+	font: 150% 'Raleway';
+	font-weight: bold;
+	color: $backgroundColor;
+	background-color: $themeColor;
+	text-align: left;
+	letter-spacing: 2px;
+	padding: 0.5em 0.85em;
+}
+
+.sectionWrapper {
+	margin-top: 10px;
+}
+
+.enterEditModeButton .exitEditModeButton {
+	display: inline !important;
+	position: relative !important;
+	float: right !important;
+	background: red !important;
+}
+
+.userAvatarProfile {
+	display: inline !important;
+	position: relative !important;
+	width: 120px !important;
+	height: 120px !important;
+	border: 3px solid $color-gray;
+	background-color: white;
+	left: 50%;
+	transform: translate(-50%, 0) !important;
+	img {
+		height: 100%;
+	}
+}
+
+.avatarContainer {
+	background-color: $themeColor;
+	height: 29px;
+}
+
+.sectionListItem {
+	margin-bottom: 64px;
+}
+
+.profileInfoSection {
+	ul {
+		padding-top: 0;
+	}
+}
+
+.contentContainer {
+	padding-left: 10px;
+	padding-right: 10px;
+	div {
+		max-width: 80%;
+		min-width: 80%;
+		height: auto;
+		margin: auto;
+	}
+
+	// for demo purpose
+	img {
+		display: block;
+		max-width: 80%;
+		height: auto;
+		margin: auto;
+	}
+}
+
+.iconContainer {
+	overflow: hidden;
+	margin-top: 20px;
+	padding-top: 10px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+
+}
+
+#sectionEditIcon {
+	display: inline;
+	position: relative;
+	float: right;
+}
+
+#sectionVisIcon {
+	display: inline;
+	position: relative;
+	margin-right: 10px;
+	float: right;
+}
+
+.chipContainer {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.courseChip {
+	margin: 10px !important;
+	min-width: 200px !important;
+	text-align: center;
+}
+
+.normalChip {
+	margin: 10px !important;
+	min-width: 0 !important;
+	text-align: center;
+}
+
+.MuiTouchRipple-root-48 {
+	display: none !important;
+}
+
+.expansionTableOutline {
+	width: 100%;
+	max-width: 100% !important;
+}
+
+.expansionItem {
+	width: 100%;
+}
+
+.MuiChip-label-257 {
+	padding-right: 60px !important;
+	font-size: 20px;
+}
+
+.fieldText {
+	text-align: center;
+	font-size: 40px;
+	background-color: rgba(0,0,0,0.5);
+	color: white;
+	display: inline-block;
+	position: relative;
+	transform: translate(-50%, 256px);
+	min-width: 0 !important;
+	left: 50%;
+}
+
+.MuiGridListTile-imgFullWidth-263,
+.MuiGridListTile-imgFullWidth-225,
+.imagesss {
+	transform: translate(0, 0) !important;
+}
+
+.profileEditButton {
+	position: fixed;
+	left: 80%;
+}

@@ -1,0 +1,377 @@
+$spacing-length: 2em;
+$main-color: #E1F5FE;
+$color-1: #D52349;
+$color-2: #252122;
+$color-3: #827A7C;
+$color-4: #F7F7F7;
+$color-5: #0FC9E7;
+
+$font-size-767: 1.5em;
+
+.CourseVisualize {
+  margin-bottom: $spacing-length;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.54);
+
+  .section-title {
+    color: white;
+    background: $color-1;
+    padding: 0.5em 0.85em;
+
+    @media only screen and (max-width: 767px) {
+      font-size: $font-size-767;
+    }
+  } // end .section-title
+
+  .d3Sample {
+    height: 400px;
+    background-size: contain;
+  }
+
+  .class-tree {
+
+    width: 100%;
+    margin: 0;
+
+    .course-level {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      background-color: lightblue;
+
+      @media only screen and (max-width: 767px) {
+        flex-wrap: wrap;
+      }
+
+      &:nth-child(odd) {
+        .course {
+          .flip-horizontal {
+            .flipper {
+              .course-name,
+              .gpa {
+                background-color: #c4e3ed;
+              }
+            }
+          }
+        }
+      }
+
+      &:nth-child(even) {
+        background-color: lightgreen;
+        .course {
+          .flip-horizontal {
+            .flipper {
+              .course-name,
+              .gpa {
+                background-color: #bdf5bd;
+              }
+            }
+          }
+        }
+      }
+
+      .course-item {
+
+        display: flex;
+        flex-direction: row;
+
+
+        &:first-child {
+          .course-icon-wrap {
+            animation-delay: .5s;
+            animation-name: fade_in_and_move_right;
+          }
+
+          .hr-line {
+            animation-delay: 1.25s;
+          }
+        }
+
+        &:nth-child(2) {
+          .course-icon-wrap {
+            animation-delay: .25s;
+            animation-name: fade_in_and_move_down;
+          }
+
+          .hr-line {
+            animation-delay: 1.5s;
+          }
+        }
+
+        &:nth-child(3) {
+          .course-icon-wrap {
+            animation-delay: 1s;
+            animation-name: fade_in_and_move_up;
+          }
+
+          .hr-line {
+            animation-delay: 1.75s;
+          }
+        }
+
+        // never used
+        &:nth-child(4) {
+          .hr-line {
+            animation-delay: 2s;
+          }
+        }
+
+        &:last-child {
+          .course-icon-wrap {
+            animation-delay: .75s;
+            animation-name: fade_in_and_move_left;
+          }
+
+          .hr-line {
+            display: none;
+          }
+        }
+
+        &:nth-child(odd) {
+          .course .course-icon-wrap img {
+            background-color: dodgerblue;
+          }
+        }
+
+        &:nth-child(even) {
+          .course .course-icon-wrap img {
+            background-color: slateblue;
+          }
+        }
+
+        @media only screen and (max-width: 767px) {
+          box-sizing: border-box;
+          // border: 2px solid red;
+          margin: 1em .75em;
+        }
+
+        .hr-line {
+          // border-bottom: 5px solid $color-1;
+          width: 3em;
+          background-color: $color-1;
+          height: 3%;
+          margin-top: 37%;
+
+          z-index: 0;
+          // transform: translateY(-58.5%);
+
+          animation-name: fade_in;
+          animation-duration: 1.25s;
+          animation-fill-mode: forwards; // maintain final state
+          opacity: 0;
+
+          @media only screen and (max-width: 767px) {
+            display: none;
+          }
+        }
+
+
+        .course {
+
+          @keyframes fade_in {
+            0% {
+              opacity: 0;
+            }
+
+            100% {
+              opacity: 1;
+            }
+          }
+
+          @keyframes fade_in_and_move_right {
+            0% {
+              opacity: 0;
+              left: -70%;
+            }
+
+            100% {
+              opacity: 1;
+              left: 0;
+            }
+          }
+
+          @keyframes fade_in_and_move_left {
+            0% {
+              opacity: 0;
+              right: -70%;
+            }
+
+            100% {
+              opacity: 1;
+              right: 0;
+            }
+          }
+
+          @keyframes fade_in_and_move_up {
+            0% {
+              opacity: 0;
+              bottom: -50%;
+            }
+
+            100% {
+              opacity: 1;
+              bottom: 0;
+            }
+          }
+
+          @keyframes fade_in_and_move_down {
+            0% {
+              opacity: 0;
+              top: -50%;
+            }
+
+            100% {
+              opacity: 1;
+              top: 0;
+            }
+          }
+
+          @keyframes text_fade_in_and_move_up {
+            0% {
+              opacity: 0;
+              bottom: -10%;
+            }
+
+            100% {
+              opacity: 1;
+              bottom: 0;
+            }
+          }
+
+          .course-icon-wrap {
+            overflow: hidden;
+            border: 5px solid orange;
+            border-radius: 50%;
+            position: relative;
+
+            width: 120px;
+            height: 120px;
+
+            animation-duration: 1.25s;
+            animation-fill-mode: forwards; // maintain in final state
+            opacity: 0;
+
+            @media only screen and (max-width: 767px) {
+              width: 160px;
+              height: 160px;
+            }
+
+            div.course-taken {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width:  100%;
+              height: 100%;
+              z-index: 5;
+              background-color: white;
+              opacity: .4;
+            }
+
+            img {
+              box-sizing: border-box;
+              padding: 1.25em;
+              width: 120px;
+              height: 120px;
+
+              @media only screen and (max-width: 767px) {
+                width: 160px;
+                height: 160px;
+              }
+            } // end img
+          } // .course-icon-wrap
+
+          .flip-horizontal {
+            perspective: 1000;
+            height: 2em;
+
+            position: relative;
+            // border: 1.5px solid $color-3;
+
+            animation-name: text_fade_in_and_move_up;
+            animation-duration: 1.25s;
+            animation-delay: 1.75s;
+            animation-fill-mode: forwards; // maintain final state
+            opacity: 0;
+
+            &:hover .flipper-flip-horizontal,
+            &:focus .flipper-flip-horizontal {
+              transform: rotateY(180deg);
+            }
+
+            .flipper {
+              margin-top: auto;
+              margin-bottom: auto;
+              transition: all .5s ease-in-out;
+              transform-style: preserve-3d;
+
+              // border: 2px solid white;
+
+              position: relative;
+              height: 100%;
+
+              .course-name {
+              }
+
+              .course-name,
+              .gpa {
+                backface-visibility: hidden;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                margin-top: .35em;
+
+                color: tomato;
+                border-radius: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                box-shadow: 1px 2px 4px -1px rgba(60,60,60,0.64);
+
+                font-size: 1.2em;
+
+                @media only screen and (max-width: 767px) {
+                  font-size: 1.5em;
+                }
+
+                // responsive development
+                // box-sizing: border-box;
+                // border: 2px solid white;
+              }
+
+              .back {
+                transform: rotateY(-180deg);
+              }
+            } // end .flipper
+
+            .popular-icon {
+              position: absolute;
+              top: -15px;
+              right: 0;
+              width: 20px;
+              height: 20px;
+
+              @media only screen and (max-width: 767px) {
+                top: -25px;
+                width: 30px;
+                height: 30px;
+              }
+
+              img {
+                height: 100%;
+                width: 100%;
+                background-color: none;
+              }
+            } // end .popular-icon
+
+          } // end .flip-horizontal
+
+        } // end .course
+
+      } // end .course-item
+
+    } // end .course-level
+  } // end .course-tree
+} // end .course-tree

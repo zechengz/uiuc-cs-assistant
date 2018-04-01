@@ -1,5 +1,5 @@
 # CS411-Project
-2018 Spring CS411 Project - Fake Engineers
+2018 Spring CS411 Project - UIUC CS Class Helper
 
 ## Setup Guide
 1. Install node modules (at least once): `npm install`

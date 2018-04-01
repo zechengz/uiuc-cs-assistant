@@ -9,3 +9,4 @@
 
 ## Current Hosting Website
 * [Link to the website](http://csassistant.web.engr.illinois.edu:55555/)
+* <a href="http://csassistant.web.engr.illinois.edu:55555/" target="_blank">Link to the website</a>

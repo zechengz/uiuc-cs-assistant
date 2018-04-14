@@ -21,6 +21,16 @@ module.exports.load = function(filename) {
             sql[blockName] += '\n' + line;
         }
     });
+    // delete sql.all;
+    // // remove block header
+    // for(var key in sql) {
+    //   let val = sql[key];
+    //   val = val.split('\n');
+    //   val.shift();
+    //   // val = val.join('\n');
+    //   // console.log(val);
+    //   sql[key] = val.join('\n');
+    // }
     return sql;
 };
 

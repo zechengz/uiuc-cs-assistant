@@ -6,6 +6,9 @@ import Paper from 'material-ui/Paper';
 import { LinearProgress } from 'material-ui/Progress';
 import ListSubheader from 'material-ui/List/ListSubheader';
 import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
+import BottomNavigation, { BottomNavigationAction } from 'material-ui/BottomNavigation';
+import Icon from 'material-ui/Icon';
+import SvgIcon from 'material-ui/SvgIcon';
 import Chip from 'material-ui/Chip';
 import Avatar from 'material-ui/Avatar';
 import Button from 'material-ui/Button';
@@ -27,6 +30,7 @@ import Checkbox from 'material-ui/Checkbox';
 import { withStyles } from 'material-ui/styles';
 import PropTypes from 'prop-types';
 import 'babel-polyfill';
+import socketClient from 'socket.io-client';
 
 const dict = {
   'Basics':['cs100','cs101','cs105','cs125','cs126','cs173','cs196','cs199','cs210','cs225','cs233','cs241','cs242',
@@ -69,7 +73,23 @@ const style = (theme) => ({
   button: {
     margin: theme.spacing.unit,
   },
+  bottomNav: {
+    width: '100%',
+  },
+  icon: {
+    margin: theme.spacing.unit,
+    filter: 'drop-shadow(2px 1px 2px rgba(0,0,0,0.5))',
+    fontSize: '2em',
+  },
 });
+
+function StarIcon(props) {
+  return (
+    <SvgIcon {...props}>
+      <path d="assets/ic_star_black_48px.svg" />
+    </SvgIcon>
+  );
+}
 
 class SidePanel extends Component {
   // static propTypes = {
@@ -109,9 +129,15 @@ class SidePanel extends Component {
     this.handleProgressCheck = this.handleProgressCheck.bind(this);
     this.handleQuery1 = this.handleQuery1.bind(this);
     this.handleQuery2 = this.handleQuery2.bind(this);
+
   }
 
   async componentDidMount() {
+    //  reload using socket.io, slower but work !
+    this.socket = socketClient('http://localhost:55555');
+    this.socket.on('refresh', (data) => {
+      location.reload();
+    });
     const { cookies } = this.props;
     let email = cookies.get('login');
     email = unescape(email);
@@ -289,6 +315,7 @@ class SidePanel extends Component {
     const { classes } = this.props;
     let query1List = this.state.query1Result ? this.state.query1Result.emails : [];
     let query2List = this.state.query2Result ? this.state.query2Result.tracks : [];
+
     return (
       <Grid
         className="SidePanel"
@@ -304,6 +331,36 @@ class SidePanel extends Component {
           <Typography type="headline" component="h2">
             {this.state.progress + "%"}
           </Typography>
+        </Card>
+        <Card className='side-item prediction'>
+          <ListSubheader>Your Predict Score:</ListSubheader>
+          <BottomNavigation className={classes.bottomNav}>
+            <SvgIcon className={classes.icon} nativeColor='yellow' viewBox='0 0 24 24'>
+              <path d="M0 0h24v24H0z" fill="none"/>
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </SvgIcon>
+            <SvgIcon className={classes.icon} nativeColor='yellow' viewBox='0 0 24 24'>
+              <path d="M0 0h24v24H0z" fill="none"/>
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </SvgIcon>
+            <SvgIcon className={classes.icon} nativeColor='yellow' viewBox='0 0 24 24'>
+              <path d="M0 0h24v24H0z" fill="none"/>
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </SvgIcon>
+            <SvgIcon className={classes.icon} nativeColor='yellow' viewBox='0 0 24 24'>
+              <path d="M0 0h24v24H0z" fill="none"/>
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </SvgIcon>
+            <SvgIcon className={classes.icon} nativeColor='yellow' viewBox='0 0 24 24'>
+              <path d="M0 0h24v24H0z" fill="none"/>
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </SvgIcon>
+          </BottomNavigation>
         </Card>
         <Paper className='side-item query-result adv-query-1'>
           <Typography variant="headline" component="h2">

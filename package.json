@@ -25,6 +25,7 @@
     "css-loader": "^0.28.9",
     "node-sass": "^4.7.2",
     "postcss-loader": "^2.1.0",
+    "reload": "^2.2.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
     "webpack": "^3.10.0",
@@ -59,6 +60,8 @@
     "react-transition-group": "^1.2.1",
     "semantic-ui-css": "^2.2.14",
     "semantic-ui-react": "^0.76.0",
+    "socket.io": "^2.1.0",
+    "socket.io-client": "^2.1.0",
     "xml-js": "^1.6.2"
   },
   "repository": {

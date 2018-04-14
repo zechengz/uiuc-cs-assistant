@@ -109,6 +109,7 @@ router.get('/takenCourse', function(req, res) {
 		mysqldb.query(sql.getUserTakenClass, { u_email: req.query.email }, (err, classes) => {
 			if (err) {
 				console.log('Error On Get Enrolled Class');
+				console.error(err);
 				return res.status (500).send ({
 					message: serverErrorMsg,
 					data: null
@@ -174,6 +175,7 @@ router.get('/goals', function(req, res) {
 		mysqldb.query(sql.get_goals, { u_email: req.query.email }, (err, goals) => {
 			if (err) {
 				console.log('Error On Get Goals');
+				console.error(err);
 				return res.status (500).send ({
 					message: serverErrorMsg,
 					data: null

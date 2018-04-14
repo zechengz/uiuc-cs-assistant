@@ -63,6 +63,9 @@ $font-size-767: 1.5em;
       }
     } // end .card-progress
 
+    &.prediction {
+    } // end .prediction
+
     &.sideProgress {
       padding-bottom: 1.25em; // incorrect on margin-bottom
       display: none;

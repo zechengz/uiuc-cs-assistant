@@ -3,9 +3,13 @@ const router = express.Router();
 const path = require ('path');
 const bodyParser = require('body-parser');
 const mongoose = require ('mongoose');
+const reload = require('reload');
 
 // create express app
 const app = express ();
+app.server = require('http').createServer(app);
+
+var io = require('socket.io')(app.server);
 
 // body parser set up
 app.use(bodyParser.urlencoded({
@@ -79,18 +83,29 @@ app.get ('/', function (req, res) {
 	return res.sendFile (path.resolve (__dirname, './public/index.html'));
 });
 
+// Deprecated: switch to connection pool
 // try to maintain mysql connections
 // NOTE: mysql connection will timeout when idle
-const mysqldb = require('./backend/lib/mysqldb');
-setInterval(function () {
-    mysqldb.query('SELECT 1');
-}, 5000);
+// const mysqldb = require('./backend/lib/mysqldb');
+// setInterval(function () {
+//     mysqldb.query('SELECT 1');
+// }, 5000);
 
 require ('./backend/routes')(app, router);
 
 var port = 55555;
 
 // listen on server port
-app.listen (port, function() {
+app.server.listen (port, function() {
 	console.log ("Server is running on localhost:" + port + "/");
 });
+
+var name = null;
+io.on('connection', (socket) => {
+  if (name === null) {
+    socket.emit('refresh', 'refresh');
+    name = socket.id;
+  }
+});
+
+// reload(app);

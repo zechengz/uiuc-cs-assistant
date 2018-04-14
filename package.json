@@ -5,8 +5,9 @@
   "main": "index.jsx",
   "scripts": {
     "watch": "webpack -d --watch",
-    "build": "webpack",
+    "build": "webpack -p",
     "dev": "webpack-dev-server --content-base public/ --history-api-fallback",
+    "serve": "nodemon index.js",
     "start": "npm run watch & nodemon index.js"
   },
   "author": "Jason SItu",

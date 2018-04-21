@@ -198,7 +198,7 @@ def select(track, classes):
 			ret_class.append(classes[i][1][0:5])
 			count += 1
 	# print ret_class
-	return
+	return ret_class
 
 def proClassDict(proList, raw):
 	ret = {}
@@ -265,7 +265,7 @@ if __name__ == "__main__":
 	# 	print classes[i][1],":",classes[i][0]
 	# for i in range(len(pros)-1, -1, -1):
 	# 	print pros[i][1],":",pros[i][0]
-	pcd = proClassDict(hin.proList, raw)
-	# ret = select(track, classes)
-	ret2 = select2(track, pcd, pros)
-	print ret2
+	#pcd = proClassDict(hin.proList, raw)
+	ret = select(track, classes)
+	print ret
+	#ret2 = select2(track, pcd, pros)

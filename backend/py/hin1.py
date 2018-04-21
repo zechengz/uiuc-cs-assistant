@@ -198,7 +198,7 @@ def select(track, classes):
 			ret_class.append(classes[i][1][0:5])
 			count += 1
 	# print ret_class
-	return
+	return ret_class
 
 def proClassDict(proList, raw):
 	ret = {}

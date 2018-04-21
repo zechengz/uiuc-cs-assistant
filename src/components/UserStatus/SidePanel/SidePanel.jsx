@@ -317,12 +317,8 @@ class SidePanel extends Component {
       }
     }).then((response) => {
       let data = response.data.data[0];
-      console.log(data);
-      data = data.slice(1, -1);
-      data = data.split(',');
-      data.forEach((item, index) => {
-        data[index] = item.slice(1, -1);
-      });
+      // console.log(data);
+      data = data.split(';');
       this.setState({ adv1: data });
     }).catch((error) => {
       console.error(error);
@@ -336,12 +332,8 @@ class SidePanel extends Component {
       }
     }).then((response) => {
       let data = response.data.data[0];
-      console.log(data);
-      data = data.slice(1, -1);
-      data = data.split(',');
-      data.forEach((item, index) => {
-        data[index] = item.slice(1, -1);
-      });
+      // console.log(data);
+      data = data.split(';');
       this.setState({ adv2: data });
     }).catch((error) => {
       console.error(error);

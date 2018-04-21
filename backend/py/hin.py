@@ -246,6 +246,7 @@ def select2(track, pcd, pros):
 				ret_pros.append(pros[i][1])
 				count += 1
 	# print ret_pros
+	ret_pros = ";".join(ret_pros)
 	return ret_pros
 
 def intersection(lst1, lst2):

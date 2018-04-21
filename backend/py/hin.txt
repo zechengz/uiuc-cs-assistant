@@ -1,0 +1,182 @@
+CS101 Intro Computing: Engrg & Sci	Davis, Neal E	2026	3.482319842053307
+CS101 Intro Computing: Engrg & Sci	Cunningham, Ryan M	693	3.41
+CS101 Intro Computing: Engrg & Sci	Gambill, Thomas N	1875	2.861301333333333
+CS105 Intro Computing: Non-Tech	Haberman, Michael	547	3.46
+CS105 Intro Computing: Non-Tech	Hellwig, Martin	1171	3.562263023057216
+CS105 Intro Computing: Non-Tech	Fagen, Wade A	1700	3.188958823529411
+CS105 Intro Computing: Non-Tech	Harris, Albert F	529	3.54
+CS125 Intro to Computer Science	Chapman, William L	2664	3.396103603603604
+CS125 Intro to Computer Science	Angrave, Lawrence C	1072	3.216343283582089
+CS126 Software Design Studio	Angrave, Lawrence C	261	3.315287356321839
+CS126 Software Design Studio	Zilles, Craig	147	3.4271428571428575
+CS173 Discrete Structures	Fleck, Margaret M	3486	3.0430263912794024
+CS173 Discrete Structures	Parthasarathy, Madhusudan	29	3.11
+CS196 Freshman Honors	Chapman, William L	561	3.821907308377897
+CS196 Freshman Honors	Fleck, Margaret M	161	3.6784472049689443
+CS196 Freshman Honors	Angrave, Lawrence C	62	3.89
+CS196 Freshman Honors	Challen, Geoffrey W	164	3.71
+CS199 Undergraduate Open Seminar	Heeren, Cinda	89	3.6244943820224718
+CS199 Undergraduate Open Seminar	Yershova, Ganna	26	3.69
+CS199 Undergraduate Open Seminar	Angrave, Lawrence C	31	3.68
+CS210 Ethical & Professional Issues	Cunningham, Ryan M	970	3.5846391752577325
+CS210 Ethical & Professional Issues	Kirlik, Alex	367	3.4207356948228878
+CS225 Data Structures	Heeren, Cinda	3538	3.1009157716223856
+CS225 Data Structures	Yershova, Ganna	72	2.84
+CS225 Data Structures	Fagen-Ulmschnei, Wade A	710	3.055
+CS233 Computer Architecture	Herman, Geoffrey L	503	2.9769781312127237
+CS233 Computer Architecture	Zilles, Craig	1068	2.862827715355805
+CS241 System Programming	Evans, Graham C	493	2.614827586206897
+CS241 System Programming	Angrave, Lawrence C	1150	2.783695652173913
+CS241 System Programming	Caccamo, Marco	152	2.72
+CS242 Programming Studio	Woodley, Michael J	1273	3.3599214454045563
+CS296 Honors Course	Heeren, Cinda	364	3.789807692307692
+CS296 Honors Course	Angrave, Lawrence C	123	3.7760975609756096
+CS296 Honors Course	Zilles, Craig	158	3.2672784810126583
+CS296 Honors Course	Fagen-Ulmschnei, Wade A	101	3.84
+CS357 Numerical Methods I	Kloeckner, Andreas P	1018	3.0349312377210214
+CS357 Numerical Methods I	Heath, Michael T	185	2.68
+CS357 Numerical Methods I	Shaffer, Eric G	247	2.834331983805668
+CS357 Numerical Methods I	Semeraro, Bart D	198	2.79
+CS357 Numerical Methods I	Olson, Luke	434	2.997626728110599
+CS361 Prob & Stat for Computer Sci	Sinha, Saurabh	64	3.41
+CS361 Prob & Stat for Computer Sci	Peng, Jian	66	3.37
+CS361 Prob & Stat for Computer Sci	Barber, Richard C	35	3.51
+CS374 Intro to Algs & Models of Comp	Chekuri, Chandra S	408	2.77
+CS374 Intro to Algs & Models of Comp	Erickson, Jeff G	398	2.5
+CS374 Intro to Algs & Models of Comp	Har-Peled, Sariel	408	2.56
+CS410 Text Information Systems	Zhai, Chengxiang	828	3.8580797101449273
+CS411 Database Systems	Parameswaran, Aditya G	382	3.485078534031414
+CS411 Database Systems	Chang, Kevin C	545	2.9554678899082565
+CS411 Database Systems	Sinha, Saurabh	193	3.23
+CS411 Database Systems	Cunningham, Ryan M	195	3.57
+CS412 Introduction to Data Mining	Han, Jiawei	430	3.208209302325582
+CS412 Introduction to Data Mining	Sundaram, Hari	222	3.52045045045045
+CS412 Introduction to Data Mining	Chang, Kevin C	176	3.09
+CS418 Interactive Computer Graphics	Shaffer, Eric G	608	3.1111513157894737
+CS418 Interactive Computer Graphics	Hart, John C	520	3.4300576923076926
+CS419 Production Computer Graphics	Shaffer, Eric G	62	3.343064516129032
+CS421 Progrmg Languages & Compilers	Beckman, A M	536	3.4888059701492535
+CS421 Progrmg Languages & Compilers	Gunter, Elsa	435	3.333448275862069
+CS421 Progrmg Languages & Compilers	Agha, Gul A	167	3.39
+CS421 Progrmg Languages & Compilers	Rosu, Grigore	180	3.04
+CS421 Progrmg Languages & Compilers	Misailovic, Sasa	90	3.39
+CS423 Operating Systems Design	Bates, Adam M	121	2.96
+CS423 Operating Systems Design	Abdelzaher, Tarek	297	3.6986868686868686
+CS425 Distributed Systems	Borisov, Nikita	170	2.98
+CS425 Distributed Systems	Gupta, Indranil	632	3.322120253164557
+CS425 Distributed Systems	Vaidya, Nitin H	388	3.111855670103093
+CS429 Software Engineering II, ACP	Xie, Tao	210	3.434095238095238
+CS429 Software Engineering II, ACP	Marinov, Darko	132	3.4
+CS431 Embedded Systems	Sha, Lui R	212	3.349811320754717
+CS431 Embedded Systems	Caccamo, Marco	176	2.725227272727273
+CS433 Computer System Organization	Adve, Sarita V	117	3.33940170940171
+CS433 Computer System Organization	Garzaran, Maria J	21	3.1
+CS433 Computer System Organization	Torrellas, Josep	52	3.32
+CS438 Communication Networks	Kravets, Robin H	262	2.624427480916031
+CS438 Communication Networks	Borisov, Nikita	81	2.64
+CS438 Communication Networks	Roy Choudhury, Romit	78	3.59
+CS438 Communication Networks	Caesar, Matthew C	71	2.55
+CS438 Communication Networks	Al-Hassanieh, Haitham	81	3.41
+CS440 Artificial Intelligence	DeJong, Gerald F	557	3.071328545780969
+CS440 Artificial Intelligence	Lazebnik, Svetlana	539	3.2558070500927645
+CS440 Artificial Intelligence	Hasegawa-Johnso, Mark A	341	3.115689149560117
+CS446 Machine Learning	Roth, Dan	321	3.357102803738318
+CS446 Machine Learning	Hockenmaier, Julia C	110	3.24
+CS446 Machine Learning	Koyejo, Oluwasanmi O	118	3.23
+CS450 Numerical Analysis	Fischer, Paul	393	3.1355216284987275
+CS450 Numerical Analysis	Heath, Michael T	285	3.0302456140350875
+CS450 Numerical Analysis	Kloeckner, Andreas P	214	3.34107476635514
+CS460 Security Laboratory	Bambenek, John C	361	3.6202216066481996
+CS461 Computer Security I	Bailey, M	317	2.95
+CS461 Computer Security I	Bailey, Michael D	274	2.935182481751825
+CS461 Computer Security I	Cunningham, Ryan M	398	3.4578391959798997
+CS461 Computer Security I	Bobba, Rakesh	92	2.96
+CS463 Computer Security II	Gunter, Carl	181	3.346298342541436
+CS465 User Interface Design	Fu, Wai-Tat	331	3.192326283987916
+CS465 User Interface Design	Bailey, Brian P	518	3.062934362934363
+CS465 User Interface Design	Kirlik, Alex	175	3.42
+CS466 Introduction to Bioinformatics	Warnow, Tandy	21	3.08
+CS466 Introduction to Bioinformatics	Sinha, Saurabh	175	3.3948
+CS466 Introduction to Bioinformatics	Peng, Jian	39	3.66
+CS484 Parallel Programming	Kale, Laxmikant V	149	3.1975838926174496
+CS484 Parallel Programming	Padua, David A	22	2.64
+CS492 Senior Project I	Woodley, Michael J	170	3.6522352941176472
+CS493 Senior Project II, ACP	Woodley, Michael J	269	3.590817843866171
+CS498 Applied Machine Learning	Forsyth, David A	376	3.6913297872340425
+CS498 Theory II	Erickson, Jeff G	252	3.040555555555556
+CS498 Theory II	Chekuri, Chandra S	51	3.09
+CS498 Theory II	Chan, Timothy M	47	3.08
+CS498 Cloud Computing Applications	Campbell, R H	51	3.88
+CS498 Virtual Reality	Lavalle, Steven M	374	3.5456684491978607
+CS498 Virtual Reality	Yershova, Ganna	334	3.8242514970059887
+CS511 Advanced Data Management	Chang, Kevin C	121	3.6057851239669416
+CS512 Data Mining Principles	Han, Jiawei	265	3.7747169811320753
+CS525 Advanced Distributed Systems	Gupta, Indranil	238	3.7078151260504204
+CS538 Advanced Computer Networks	Godfrey, Philip B	24	3.77
+CS538 Advanced Computer Networks	Nahrstedt, Klara	21	3.84
+CS555 Numerical Methods for PDEs	Olson, Luke	118	3.8328813559322037
+CS565 Human-Computer Interaction	Bailey, Brian P	55	3.82
+CS598 Autonomous Vehicles for AI	Forsyth, David A	27	3.93
+CS598 Cutting-Edge Trends In DLR	Lazebnik, Svetlana	59	3.82
+CS598 Social Sensing	Abdelzaher, Tarek	24	3.89
+CS100 Freshman Orientation	Pitt, Leonard B	898	3.7685968819599105
+CS420 Parallel Progrmg: Sci & Engrg	Snir, Marc	82	2.96390243902439
+CS420 Parallel Progrmg: Sci & Engrg	Kale, Laxmikant V	54	3.52
+CS424 Real-Time Systems	Abdelzaher, Tarek	131	3.457709923664122
+CS426 Compiler Construction	Adve, Vikram S	32	3.43
+CS427 Software Engineering I	Rosu, Grigore	254	3.278897637795276
+CS427 Software Engineering I	Xie, Tao	175	3.46
+CS498 Digital Forensics	Campbell, R H	95	3.6222105263157895
+CS498 Social & Information Networks	Sundaram, Hari	60	3.49
+CS498 Intro to Data Science	Stodden, Victoria	38	3.82
+CS498 The Art of Web Programming	Kumar, Ranjitha	261	3.2379310344827585
+CS519 Scientific Visualization	Shaffer, Eric G	99	3.6456565656565654
+CS527 Topics in Software Engineering	Marinov, Darko	79	3.622911392405063
+CS548 Models of Cognitive Processes	Fu, Wai-Tat	71	3.4180281690140846
+CS563 Advanced Computer Security	Gunter, Carl	27	3.88
+CS598 Advanced Information Retrieval	Zhai, Chengxiang	74	3.832702702702703
+CS598 Graphical Models	Koyejo, Oluwasanmi O	25	3.86
+CS428 Software Engineering II	Xie, Tao	69	3.6802898550724636
+CS428 Software Engineering II	Marinov, Darko	28	3.11
+CS467 Social Visualization	Karahalios, Kyratso G	238	3.6650420168067224
+CS494 Senior Project II	Woodley, Michael J	50	3.6058000000000003
+CS498 Mobile Interaction Design	Bailey, Brian P	44	3.63
+CS498 Algorithms and Models of Comp	Viswanathan, Mahesh	369	2.83
+CS498 Algorithms and Models of Comp	Pitt, Leonard B	381	2.6020209973753277
+CS498 Algorithms and Models of Comp	Erickson, Jeff G	74	2.53
+CS498 Probability in CS	Smaragdis, Paris	60	3.51
+CS498 Probability in CS	Forsyth, David A	64	3.0
+CS498 Software Testing	Marinov, Darko	53	3.4960377358490566
+CS498 Art and Science of Web Prog	Kumar, Ranjitha	180	3.2234444444444446
+CS533 Parallel Computer Architecture	Torrellas, Josep	74	3.6013513513513513
+CS546 Machine Learning in NLP	Roth, Dan	39	3.64
+CS546 Machine Learning in NLP	Hockenmaier, Julia C	26	3.67
+CS473 Fundamental Algorithms	Har-Peled, Sariel	72	2.46
+CS473 Fundamental Algorithms	Kolla, Alexandra	185	2.84
+CS473 Fundamental Algorithms	Chekuri, Chandra S	170	2.85
+CS598 Topic in Algorithms	Blum, Avrim L	24	3.67
+CS598 Improving Your Research Skills	Sha, Lui R	28	3.88
+CS447 Natural Language Processing	Hockenmaier, Julia C	118	3.5928813559322035
+CS498 Probability in Computer Sci	Forsyth, David A	78	3.19
+CS498 Computational Photography	Hoiem, Derek W	30	3.65
+CS556 Iterative & Multigrid Methods	Olson, Luke	27	3.56
+CS598 Parallel Programming	Kale, Laxmikant V	23	3.64
+CS598 Mach Lrng for Signal Processng	Smaragdis, Paris	135	3.7088888888888887
+CS598 Data-Driven Design	Kumar, Ranjitha	22	3.68
+CS373 Theory of Computation	Meseguer, Jose	143	2.84
+CS398 Computer Architecture	Zilles, Craig	200	2.84
+CS414 Multimedia Systems	Nahrstedt, Klara	39	3.25
+CS498 Cloud Computing	Campbell, R H	91	3.72
+CS498 Using Tech to Solve Adv Probs	Clifton, Rhiannon L	22	3.65
+CS544 Optimiz in Computer Vision	Forsyth, David A	31	3.96
+CS574 Randomized Algorithms	Har-Peled, Sariel	24	3.44
+CS598 Special Topics	Adve, Sarita V	21	3.83
+CS199 De-Bug your Brain	Angrave, Lawrence C	25	3.82
+CS445 Computational Photography	Hoiem, Derek W	92	3.7
+CS510 Advanced Information Retrieval	Zhai, Chengxiang	87	3.79
+CS523 Advanced Operating Systems	Campbell, R H	32	3.81
+CS554 Parallel Numerical Algorithms	Solomonik, Edgar V	22	3.77
+CS598 Secure Processor Design	Fletcher, Christopher W	25	3.95
+CS598 Advanced Bayesian Modeling	Park, Trevor H	50	3.65
+CS598 Adv Social&Information Network	Sundaram, Hari	24	3.89
+CS598 Machine Learning Theory	Telgarsky, Matus J	22	3.83

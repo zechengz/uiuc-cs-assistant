@@ -246,6 +246,7 @@ def select2(track, pcd, pros):
 				ret_pros.append(pros[i][1])
 				count += 1
 	# print ret_pros
+	ret_pros = ";".join(ret_pros)
 	return ret_pros
 
 def intersection(lst1, lst2):
@@ -268,4 +269,5 @@ if __name__ == "__main__":
 	pcd = proClassDict(hin.proList, raw)
 	# ret = select(track, classes)
 	ret2 = select2(track, pcd, pros)
+	print type(ret2)
 	print ret2

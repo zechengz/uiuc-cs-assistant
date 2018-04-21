@@ -311,20 +311,38 @@ class SidePanel extends Component {
   }
 
   handleAdv1() {
-    axios.get('/api/user/getAdv1')
-    .then((response) => {
-      let data = response.data.data;
-      // this.setState({ query2Result: result });
+    axios.get('/api/user/getAdv1', {
+      params: {
+        direction: this.state.user.direction
+      }
+    }).then((response) => {
+      let data = response.data.data[0];
+      console.log(data);
+      data = data.slice(1, -1);
+      data = data.split(',');
+      data.forEach((item, index) => {
+        data[index] = item.slice(1, -1);
+      });
+      this.setState({ adv1: data });
     }).catch((error) => {
       console.error(error);
     });
   }
 
   handleAdv2() {
-    axios.get('/api/user/getAdv2')
-    .then((response) => {
-      let data = response.data.data;
-      // this.setState({ query2Result: result });
+    axios.get('/api/user/getAdv2', {
+      params: {
+        direction: this.state.user.direction
+      }
+    }).then((response) => {
+      let data = response.data.data[0];
+      console.log(data);
+      data = data.slice(1, -1);
+      data = data.split(',');
+      data.forEach((item, index) => {
+        data[index] = item.slice(1, -1);
+      });
+      this.setState({ adv2: data });
     }).catch((error) => {
       console.error(error);
     });

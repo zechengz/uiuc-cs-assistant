@@ -3,7 +3,7 @@ import sys
 import copy
 
 def getData():
-	file = "hin.txt"
+	file = "./backend/py/hin.txt"
 	raw = []
 	with open (file, "r") as f:
 		for line in f:
@@ -49,7 +49,7 @@ class hin():
 				classList.append(elem[0])
 			if elem[1] not in proList:
 				proList.append(elem[1])
-		
+
 		self.classList = classList
 		self.proList = proList
 
@@ -146,7 +146,7 @@ class hin():
 				count = 0
 				for j in range(len(self.WXY[i])):
 					if self.WXY[i][j] != 0:
-						count += 1	
+						count += 1
 				rx[i] = sum(times(self.WXY[i], ry))/count
 			# classes = list(zip(rx, self.classList))
 			# classes.sort(key=lambda tup: tup[0])
@@ -246,7 +246,6 @@ def select2(track, pcd, pros):
 				ret_pros.append(pros[i][1])
 				count += 1
 	# print ret_pros
-	ret_pros = ";".join(ret_pros)
 	return ret_pros
 
 def intersection(lst1, lst2):
@@ -269,5 +268,4 @@ if __name__ == "__main__":
 	pcd = proClassDict(hin.proList, raw)
 	# ret = select(track, classes)
 	ret2 = select2(track, pcd, pros)
-	print type(ret2)
 	print ret2

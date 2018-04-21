@@ -20,7 +20,7 @@ const PythonShell = require('python-shell');
 
 router.get('/getAdv1', function(req, res) {
 	new Promise((resolve, reject) => {
-		PythonShell.run('../py/hin.py', {
+		PythonShell.run('./backend/py/hin.py', {
 			args: req.query.direction,
 		}, (error, result) => {
 			if (error) {
@@ -45,7 +45,7 @@ router.get('/getAdv1', function(req, res) {
 
 router.get('/getAdv2', function(req, res) {
 	new Promise((resolve, reject) => {
-		PythonShell.run('../py/frequentPattern.py', {
+		PythonShell.run('./backend/py/hin1.py', {
 			args: req.query.direction,
 		}, (error, result) => {
 			if (error) {

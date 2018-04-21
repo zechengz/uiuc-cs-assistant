@@ -12,6 +12,9 @@
   },
   "author": "Jason SItu",
   "license": "ISC",
+  "browser": {
+    "child_process": false
+  },
   "devDependencies": {
     "autoprefixer": "^7.2.5",
     "babel-cli": "^6.26.0",
@@ -36,6 +39,7 @@
     "autosuggest-highlight": "^3.1.1",
     "axios": "^0.17.1",
     "bcrypt": "^1.0.3",
+    "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
     "bootstrap": "^4.0.0",
     "express": "^4.16.2",
@@ -50,6 +54,7 @@
     "nodemon": "^1.14.12",
     "normalize.css": "^7.0.0",
     "popper.js": "^1.13.0",
+    "python-shell": "^0.5.0",
     "query-string": "^5.1.0",
     "react": "^16.2.0",
     "react-autosuggest": "^9.3.3",

@@ -15,6 +15,59 @@ const duplicateEmailMsg = 'Email Address Exist';
 const invalidPasswordMsg = 'Invalid Password';
 const badRequestMsg = 'Bad Request';
 
+const Promise = require('bluebird')
+const PythonShell = require('python-shell');
+
+router.get('/getAdv1', function(req, res) {
+	new Promise((resolve, reject) => {
+		PythonShell.run('../py/hin.py', {
+			args: req.query.direction,
+		}, (error, result) => {
+			if (error) {
+				reject(error);
+			} else {
+				resolve(result);
+			}
+		});
+	}).then((result) => {
+		return res.status (200).send ({
+			message: 'OK',
+			data: result
+		});
+	}).catch((error) => {
+		console.error(error);
+		return res.status (500).send ({
+			message: serverErrorMsg,
+			data: null
+		});
+	});
+});
+
+router.get('/getAdv2', function(req, res) {
+	new Promise((resolve, reject) => {
+		PythonShell.run('../py/frequentPattern.py', {
+			args: req.query.direction,
+		}, (error, result) => {
+			if (error) {
+				reject(error);
+			} else {
+				resolve(result);
+			}
+		});
+	}).then((result) => {
+		return res.status (200).send ({
+			message: 'OK',
+			data: result
+		});
+	}).catch((error) => {
+		console.error(error);
+		return res.status (500).send ({
+			message: serverErrorMsg,
+			data: null
+		});
+	});
+});
+
 router.get('/allUserAvgGPA', function(req, res) {
 	mysqldb.query(sql.getAllUserAvgGPA, (err, users) => {
 		if (err) {

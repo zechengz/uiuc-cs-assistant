@@ -115,6 +115,8 @@ class SidePanel extends Component {
       inProgress: true,
       query1Result: undefined,
       query2Result: undefined,
+      adv1: undefined,
+      adv2: undefined,
     };
 
     this.number = 1;
@@ -129,7 +131,8 @@ class SidePanel extends Component {
     this.handleProgressCheck = this.handleProgressCheck.bind(this);
     this.handleQuery1 = this.handleQuery1.bind(this);
     this.handleQuery2 = this.handleQuery2.bind(this);
-
+    this.handleAdv1 = this.handleAdv1.bind(this);
+    this.handleAdv2 = this.handleAdv2.bind(this);
   }
 
   async componentDidMount() {
@@ -307,6 +310,26 @@ class SidePanel extends Component {
     });
   }
 
+  handleAdv1() {
+    axios.get('/api/user/getAdv1')
+    .then((response) => {
+      let data = response.data.data;
+      // this.setState({ query2Result: result });
+    }).catch((error) => {
+      console.error(error);
+    });
+  }
+
+  handleAdv2() {
+    axios.get('/api/user/getAdv2')
+    .then((response) => {
+      let data = response.data.data;
+      // this.setState({ query2Result: result });
+    }).catch((error) => {
+      console.error(error);
+    });
+  }
+
   render() {
     let goalList = this.state.user.goals;
     if (goalList == undefined) {
@@ -315,6 +338,9 @@ class SidePanel extends Component {
     const { classes } = this.props;
     let query1List = this.state.query1Result ? this.state.query1Result.emails : [];
     let query2List = this.state.query2Result ? this.state.query2Result.tracks : [];
+
+    let adv1 = this.state.adv1 ? this.state.adv1 : [];
+    let adv2 = this.state.adv2 ? this.state.adv2 : [];
 
     return (
       <Grid
@@ -362,6 +388,56 @@ class SidePanel extends Component {
             </SvgIcon>
           </BottomNavigation>
         </Card>
+        <Paper className='side-item query-result adv-func-1'>
+          <Typography variant="headline" component="h2">
+            Top 4 professors
+            <List>
+              {
+                adv1.map((item, index) => {
+                  return (
+                    <ListItem button key={index}>
+                      <ListItemText primary={item} />
+                    </ListItem>
+                  );
+                })
+              }
+            </List>
+            <Button
+              variant="raised"
+              color="primary"
+              className={classes.button}
+              onClick={this.handleAdv1}
+              disabled={this.state.adv1 !== undefined}
+              >
+              Get Result
+            </Button>
+          </Typography>
+        </Paper>
+        <Paper className='side-item query-result adv-func-2'>
+          <Typography variant="headline" component="h2">
+            Top 4 courses
+            <List>
+              {
+                adv2.map((item, index) => {
+                  return (
+                    <ListItem button key={index}>
+                      <ListItemText primary={item} />
+                    </ListItem>
+                  );
+                })
+              }
+            </List>
+            <Button
+              variant="raised"
+              color="primary"
+              className={classes.button}
+              onClick={this.handleAdv2}
+              disabled={this.state.adv2 !== undefined}
+              >
+              Get Result
+            </Button>
+          </Typography>
+        </Paper>
         <Paper className='side-item query-result adv-query-1'>
           <Typography variant="headline" component="h2">
             Advance Query 1

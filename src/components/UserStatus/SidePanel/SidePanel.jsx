@@ -182,18 +182,6 @@ class SidePanel extends Component {
       });
       console.log(this.state.user.direction);
       console.log('adv3');
-      axios.get('/api/user/getAdv3', {
-        params: {
-          direction: user.direction
-        }
-      }).then((response) => {
-        let data = response.data.data[0];
-        // console.log(data);
-        data = data.split(';');
-        this.setState({ adv1: data });
-      }).catch((error) => {
-        console.error(error);
-      });
     }
   }
 

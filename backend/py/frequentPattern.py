@@ -26,7 +26,7 @@ def printFormat(l, classList):
 			maxLen = len(elem)
 	maxArr = []
 	for i in range(3):
-		if maxLen >= 3:
+		if maxLen-i >= 3:
 			maxArr.append(maxLen-i)
 	for i in range(len(l)):
 		if len(l[i]) < 2:

@@ -36,6 +36,7 @@ def printFormat(l, classList):
 				elif len(l[i]) >= maxLen:
 					string += classList[l[i][j]]
 					string += "\n"
+	print string
 
 def loadData(track, data):
 	trackInfo = {'Basics':

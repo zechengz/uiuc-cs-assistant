@@ -28,11 +28,14 @@ def printFormat(l, classList):
 		if len(l[i]) < 2:
 			continue
 		else:
+			string = ""
 			for j in range(len(l[i])):
 				if j != len(l[i])-1 and len(l[i]) >= maxLen:
-					print classList[l[i][j]]+";"
+					string += classList[l[i][j]]
+					string += ";"
 				elif len(l[i]) >= maxLen:
-					print classList[l[i][j]]
+					string += classList[l[i][j]]
+					string += "\n"
 
 def loadData(track, data):
 	trackInfo = {'Basics':

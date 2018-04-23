@@ -30,7 +30,7 @@ def printFormat(l, classList):
 		else:
 			for j in range(len(l[i])):
 				if j != len(l[i])-1 and len(l[i]) >= maxLen:
-					print classList[l[i][j]]+",",
+					print classList[l[i][j]]+";"
 				elif len(l[i]) >= maxLen:
 					print classList[l[i][j]]
 

@@ -2,19 +2,30 @@ import itertools
 import sys
 import copy
 
-def getData():
-	file = "./backend/py/hin.txt"
+def getData(data):
+	# file = "./backend/py/hin.txt"
 	raw = []
-	with open (file, "r") as f:
-		for line in f:
-			line = line[0:len(line)-1]
-			if int(line[2:5]) < 400 or line[2:5] == "421":
-				continue
-			else:
-				line = line.split("\t")
-				line[2] = int(line[2])
-				line[3] = float(line[3])
-				raw.append(line)
+	data = data.split("\n")
+	classProDict = {}
+	for elem in data:
+		elem = elem.split(";")
+		if (elem[1], elem[2]) not in classProDict:
+			classProDict[(elem[1], elem[2])] = [int(elem[3]), float(elem[4])]
+		else:
+			classProDict[(elem[1], elem[2])][0] += int(elem[3])
+			classProDict[(elem[1], elem[2])][1] += float(elem[4])
+	for classPros in classProDict:
+		c = classPros[0]
+		pros = classPros[1]
+		numberOfStudents = classProDict[classPros][0]
+		gpa = classProDict[classPros][1]
+		if int(c[2:5]) < 400 or line[2:5] == "421":
+			continue
+		else:
+			line = [c, pros, numberOfStudents, gpa]
+			# line[2] = int(line[2])
+			# line[3] = float(line[3])
+			raw.append(line)
 	return raw
 
 def column(matrix, i):
@@ -255,7 +266,8 @@ def intersection(lst1, lst2):
 
 if __name__ == "__main__":
 	track = sys.argv[1]
-	raw = getData()
+	data = sys.argv[2]
+	raw = getData(data)
 	hin = hin()
 	hin.fit(raw, factor = 0.2)
 	classes = list(zip(hin.rx, hin.classList))

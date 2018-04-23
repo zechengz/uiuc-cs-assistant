@@ -17,11 +17,38 @@ const badRequestMsg = 'Bad Request';
 
 const Promise = require('bluebird')
 const PythonShell = require('python-shell');
+require('babel-polyfill');
 
-router.get('/getAdv1', function(req, res) {
+router.get('/getAdv1', async function(req, res) {
+	let class_data = undefined;
+	// const class_name = 'CS 125 Intro to Computer Science';
+	await mysqldb.query(sql.getAllClassRecord, (err, result) => {
+		if (err) {
+			console.log('Error On Get Enrolled Class');
+			console.error(err);
+			return res.status (500).send ({
+				message: serverErrorMsg,
+				data: null
+			});
+		} else {
+			console.log('We have the data.');
+			var data = '';
+			for (var i = 0; i < result.length; i++) {
+				var str = '';
+				var item = result[i];
+				str += item.yearTerm + ';';
+				str += item.class + ';';
+				str += item.instructor + ';';
+				str += item.studentNum.toString() + ';';
+				str += item.aveGPA.toString() + '\n';
+				data += str;
+			}
+			class_data = result;
+		}
+	});
 	new Promise((resolve, reject) => {
 		PythonShell.run('./backend/py/hin.py', {
-			args: req.query.direction,
+			args: [req.query.direction, class_data],
 		}, (error, result) => {
 			if (error) {
 				reject(error);
@@ -217,7 +244,7 @@ router.post('/course', function(req, res) {
 
 // query to display goals
 router.get('/goals', function(req, res) {
-	console.log(req.query.email);
+	// console.log(req.query.email);
 	if (req.query.email === undefined) {
 		console.log ("User email must be specified");
 		return res.status (400).send ({
@@ -234,7 +261,7 @@ router.get('/goals', function(req, res) {
 					data: null
 				});
 			} else {
-				console.log(goals);
+				// console.log(goals);
 				var goalList = [];
 				for (var i = 0; i < goals.length; i++) {
 					goalList.push(goals[i].message);
@@ -402,7 +429,7 @@ router.post("/login", function (req, res) {
 	} else {
 		mysqldb.query(sql.find_user_password, { u_email: req.body.email }, (err_0, user) => {
 			if (err_0) {
-				console.log (err_0);
+				console.log(err_0);
 				return res.status (500).send ({
 					message: serverErrorMsg,
 					data: null
@@ -414,8 +441,8 @@ router.post("/login", function (req, res) {
 					data: null
 				});
 			} else {
-				console.log('user hash');
-				console.log(user[0].password);
+				// console.log('user hash');
+				// console.log(user[0].password);
 				bcrypt.compare(req.body.password, user[0].password, (err_1, isMatch) => {
 					if (err_1) {
 						console.error("Error on Compare Two Passwords");
@@ -578,6 +605,5 @@ router.put ("/", function (req, res) {
 		*/
 	}
 });
-
 
 module.exports = router;

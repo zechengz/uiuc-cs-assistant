@@ -243,7 +243,7 @@ class NavBar extends Component {
                 aria-haspopup="true"
                 onClick={this.handleClickUserNF.bind(this)}
                 >
-                <Badge badgeContent={this.state.userNF.length} color="accent">
+                <Badge badgeContent={this.state.userNF.length} color="default">
                   <Notifications />
                 </Badge>
               </IconButton>

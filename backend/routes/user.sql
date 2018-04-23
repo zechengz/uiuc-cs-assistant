@@ -1,3 +1,14 @@
+-- BLOCK getAllClassRecord
+SELECT
+  *
+FROM
+  classInfo;
+
+-- BLOCK getClassRecord
+SELECT class
+FROM classInfo
+WHERE class = :u_class;
+
 -- BLOCK create_user
 INSERT INTO user (name, email, password, year, direction, avatar)
 SELECT * FROM (SELECT :u_name, :u_email, :u_password, :u_year, :u_direction, :u_avatar) AS temp

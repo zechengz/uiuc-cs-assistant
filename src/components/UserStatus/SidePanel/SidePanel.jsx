@@ -30,7 +30,6 @@ import Checkbox from 'material-ui/Checkbox';
 import { withStyles } from 'material-ui/styles';
 import PropTypes from 'prop-types';
 import 'babel-polyfill';
-import socketClient from 'socket.io-client';
 
 const dict = {
   'Basics':['cs100','cs101','cs105','cs125','cs126','cs173','cs196','cs199','cs210','cs225','cs233','cs241','cs242',
@@ -83,14 +82,6 @@ const style = (theme) => ({
   },
 });
 
-function StarIcon(props) {
-  return (
-    <SvgIcon {...props}>
-      <path d="assets/ic_star_black_48px.svg" />
-    </SvgIcon>
-  );
-}
-
 class SidePanel extends Component {
   // static propTypes = {
   //   classes: PropTypes.object.isRequired,
@@ -136,11 +127,6 @@ class SidePanel extends Component {
   }
 
   async componentDidMount() {
-    //  reload using socket.io, slower but work !
-    this.socket = socketClient('http://localhost:55555');
-    this.socket.on('refresh', (data) => {
-      location.reload();
-    });
     const { cookies } = this.props;
     let email = cookies.get('login');
     email = unescape(email);
@@ -182,7 +168,7 @@ class SidePanel extends Component {
             }
           }
           this.setState({
-            progress: (classTakenTrack / dict[user.direction].length * 100).toFixed(2),
+            progress: parseFloat((classTakenTrack / dict[user.direction].length * 100).toFixed(2)),
             user: user,
           });
         }).catch((error) => {
@@ -368,36 +354,6 @@ class SidePanel extends Component {
             {this.state.progress + "%"}
           </Typography>
         </Card>
-        <Card className='side-item prediction'>
-          <ListSubheader>Your Predict Score:</ListSubheader>
-          <BottomNavigation className={classes.bottomNav}>
-            <SvgIcon className={classes.icon} nativeColor='yellow' viewBox='0 0 24 24'>
-              <path d="M0 0h24v24H0z" fill="none"/>
-              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-              <path d="M0 0h24v24H0z" fill="none"/>
-            </SvgIcon>
-            <SvgIcon className={classes.icon} nativeColor='yellow' viewBox='0 0 24 24'>
-              <path d="M0 0h24v24H0z" fill="none"/>
-              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-              <path d="M0 0h24v24H0z" fill="none"/>
-            </SvgIcon>
-            <SvgIcon className={classes.icon} nativeColor='yellow' viewBox='0 0 24 24'>
-              <path d="M0 0h24v24H0z" fill="none"/>
-              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-              <path d="M0 0h24v24H0z" fill="none"/>
-            </SvgIcon>
-            <SvgIcon className={classes.icon} nativeColor='yellow' viewBox='0 0 24 24'>
-              <path d="M0 0h24v24H0z" fill="none"/>
-              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-              <path d="M0 0h24v24H0z" fill="none"/>
-            </SvgIcon>
-            <SvgIcon className={classes.icon} nativeColor='yellow' viewBox='0 0 24 24'>
-              <path d="M0 0h24v24H0z" fill="none"/>
-              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-              <path d="M0 0h24v24H0z" fill="none"/>
-            </SvgIcon>
-          </BottomNavigation>
-        </Card>
         <Paper className='side-item query-result adv-func-1'>
           <Typography variant="headline" component="h2">
             Top 4 professors
@@ -510,7 +466,6 @@ class SidePanel extends Component {
             <Button
               fab
               mini
-              color="accent"
               aria-label="add"
               onClick={this.handleClickOpen}
               className='goal-item-add-btn'>
@@ -559,7 +514,6 @@ class SidePanel extends Component {
                 Submit
               </Button>
               <Button
-                color="accent"
                 className='dialog-btn-close'
                 onClick={this.handleRequestClose}
                 >

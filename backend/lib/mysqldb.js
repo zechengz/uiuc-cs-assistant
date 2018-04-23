@@ -45,7 +45,7 @@ pool.getConnection((err, connection) => {
   if (err) {
     throw console.error(err);
   } else {
-    console.log('Connect Remote MySql Database Success!');
+    console.log('Connected To Remote MySql Database Success!');
   }
 
   console.log('Releasing current connection...');

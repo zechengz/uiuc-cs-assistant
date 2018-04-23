@@ -59,7 +59,7 @@ def loadData(track, data):
 		  ['cs423','cs424','cs426','cs431','cs433','cs484','cs523','cs526','cs533','cs536','cs541','cs584','cs598 Parallel Programming'],
 		  'Group Project':
 		  ['cs427','cs428','cs429','cs445','cs465','cs467','cs493','cs494']}
-	track = "Human and Social Impact"
+	# track = "Human and Social Impact"
 	theta = 0.2
 	epsilon = 0.2
 	sequence = []

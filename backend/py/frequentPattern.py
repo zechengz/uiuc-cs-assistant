@@ -24,16 +24,22 @@ def printFormat(l, classList):
 	for elem in l:
 		if len(elem) > maxLen:
 			maxLen = len(elem)
+	maxArr = []
+	for i in range(3):
+		if maxLen >= 3:
+			maxArr.append(maxLen-i)
 	for i in range(len(l)):
 		if len(l[i]) < 2:
 			continue
 		else:
 			string = ""
 			for j in range(len(l[i])):
-				if j != len(l[i])-1 and len(l[i]) >= maxLen:
+				if j != len(l[i])-1 and len(l[i]) in maxArr:
 					string += classList[l[i][j]]
 					string += ";"
-				elif len(l[i]) >= maxLen:
+				elif len(l[i]) in maxArr:
+					indexOfDel = maxArr.index(len(l[i]))
+					del maxArr[indexOfDel]
 					string += classList[l[i][j]]
 					string += "\n"
 	print string

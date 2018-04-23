@@ -37,7 +37,7 @@ def printFormat(l, classList):
 				if j != len(l[i])-1 and len(l[i]) in maxArr:
 					string += classList[l[i][j]]
 					string += ";"
-				elif len(l[i]) in maxArr:
+				elif len(l[i]) in maxArr and j == len(l[i])-1:
 					indexOfDel = maxArr.index(len(l[i]))
 					del maxArr[indexOfDel]
 					string += classList[l[i][j]]

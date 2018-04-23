@@ -41,7 +41,8 @@ def printFormat(l, classList):
 					indexOfDel = maxArr.index(len(l[i]))
 					del maxArr[indexOfDel]
 					string += classList[l[i][j]]
-		print string
+		if string != "":
+			print string
 
 def loadData(track, data):
 	trackInfo = {'Basics':

@@ -6,6 +6,7 @@ def getData(data):
 	# file = "./backend/py/hin.txt"
 	raw = []
 	data = data.split("\n")
+	data = data[0:len(data)-1]
 	classProDict = {}
 	for elem in data:
 		elem = elem.split(";")
@@ -16,10 +17,12 @@ def getData(data):
 			classProDict[(elem[1], elem[2])][1] += float(elem[4])
 	for classPros in classProDict:
 		c = classPros[0]
+		c = c.replace(" ", "")
+		c = c[0:5]
 		pros = classPros[1]
 		numberOfStudents = classProDict[classPros][0]
 		gpa = classProDict[classPros][1]
-		if int(c[2:5]) < 400 or line[2:5] == "421":
+		if int(c[2:5]) < 400 or c[2:5] == "421":
 			continue
 		else:
 			line = [c, pros, numberOfStudents, gpa]

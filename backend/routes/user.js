@@ -52,7 +52,7 @@ router.get('/getAdv1', async function(req, res) {
 		});
 	});
 	new Promise((resolve, reject) => {
-		PythonShell.run('./backend/py/hin.py', {
+		var shell = PythonShell.run('./backend/py/hin.py', {
 			args: [req.query.direction, class_data],
 		}, (error, result) => {
 			if (error) {
@@ -60,6 +60,9 @@ router.get('/getAdv1', async function(req, res) {
 			} else {
 				resolve(result);
 			}
+		});
+		shell.on('message', (msg) => {
+			console.log(msg);
 		});
 	}).then((result) => {
 		return res.status (200).send ({

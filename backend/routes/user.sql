@@ -61,6 +61,11 @@ WHERE email = :u_email
 INSERT INTO enroll (email, class, gpa)
 VALUES (:u_email, :u_class, :u_gpa);
 
+
+-- BLOCK insertTrackClass
+INSERT INTO trackClass (track, class)
+VALUES (:u_track, :u_class);
+
 -- BLOCK getTrackClass
 SELECT class
 FROM trackClass

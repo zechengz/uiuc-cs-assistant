@@ -274,10 +274,24 @@ class SidePanel extends Component {
     axios.get('/api/user/allUserAvgGPA')
     .then((response) => {
       let data = response.data.data;
-      let result = {
-        emails: data.userList,
-        gpas: data.avgGPAList,
+      console.log('Query 1 ----');
+      console.log(data);
+      // let result = {
+      //   emails: data.userList,
+      //   gpas: data.avgGPAList,
+      // }
+
+      let gpa = 0;
+      for (var i = 0; i < data.avgGPAList.length; i++) {
+        gpa += data.avgGPAList[i];
       }
+      gpa /= data.avgGPAList.length;
+      let result = {
+        emails: ['Avg GPA'],
+        gpas: [gpa],
+      }
+
+
       this.setState({ query1Result: result });
     }).catch((error) => {
       console.error(error);
@@ -408,7 +422,7 @@ class SidePanel extends Component {
         </Paper>
         <Paper className='side-item query-result adv-query-1'>
           <Typography variant="headline" component="h2">
-            Advance Query 1
+            Avg User GPA
             <List>
               {
                 query1List.map((email, index) => {
@@ -433,7 +447,7 @@ class SidePanel extends Component {
         </Paper>
         <Paper className='side-item query-result adv-query-2'>
           <Typography variant="headline" component="h2">
-            Advance Query 2
+            Avg Track GPA On Users
             <List>
               {
                 query2List.map((track, index) => {

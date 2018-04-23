@@ -6,8 +6,10 @@ def getData(data):
 	# file = "./backend/py/hin.txt"
 	raw = []
 	data = data.split("\n")
+	data = data[0:len(data)-1]
 	classProDict = {}
 	for elem in data:
+		# print elem
 		elem = elem.split(";")
 		if (elem[1], elem[2]) not in classProDict:
 			classProDict[(elem[1], elem[2])] = [int(elem[3]), float(elem[4])]
@@ -16,16 +18,23 @@ def getData(data):
 			classProDict[(elem[1], elem[2])][1] += float(elem[4])
 	for classPros in classProDict:
 		c = classPros[0]
+		c = c.replace(" ", "")
+		c = c[0:5]
 		pros = classPros[1]
 		numberOfStudents = classProDict[classPros][0]
 		gpa = classProDict[classPros][1]
-		if int(c[2:5]) < 400 or line[2:5] == "421":
+		# print float(gpa)
+		# print pros
+		if int(c[2:5]) < 400 or c[2:5] == "421":
 			continue
 		else:
 			line = [c, pros, numberOfStudents, gpa]
 			# line[2] = int(line[2])
 			# line[3] = float(line[3])
+			# print line
 			raw.append(line)
+			# print line
+		# print raw
 	return raw
 
 def column(matrix, i):
@@ -268,6 +277,7 @@ if __name__ == "__main__":
 	track = sys.argv[1]
 	data = sys.argv[2]
 	raw = getData(data)
+	# print raw
 	hin = hin()
 	hin.fit(raw, factor = 0.2)
 	classes = list(zip(hin.rx, hin.classList))

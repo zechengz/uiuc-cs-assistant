@@ -1,4 +1,5 @@
 from itertools import combinations
+import sys
 import copy
 
 # environment : python2
@@ -8,41 +9,109 @@ epsilon = 0
 sequence = []
 start = 0
 
-def printFormat(l):
-	# print l
+def printFormat(l, classList):
 	global start
-	with open("zzhan147-output.txt","w") as f:
-		for i in range(len(l)):
+	# with open("zzhan147-output.txt","w") as f:
+	# 	for i in range(len(l)):
+	# 		for j in range(len(l[i])):
+	# 			if j != len(l[i])-1:
+	# 				print str(l[i][j])+", ",
+	# 				f.write(str(l[i][j])+", ")
+	# 			else:
+	# 				print l[i][j]
+	# 				f.write(str(l[i][j])+"\n")
+	maxLen = 1
+	for elem in l:
+		if len(elem) > maxLen:
+			maxLen = len(elem)
+	for i in range(len(l)):
+		if len(l[i]) < 2:
+			continue
+		else:
 			for j in range(len(l[i])):
-				if j != len(l[i])-1:
-					print str(l[i][j])+", ",
-					f.write(str(l[i][j])+", ")
-				else:
-					print l[i][j]
-					f.write(str(l[i][j])+"\n")
-
-def loadData(filename):
-	theta = 0
-	epsilon = 0
+				if j != len(l[i])-1 and len(l[i]) >= maxLen:
+					print classList[l[i][j]]+",",
+				elif len(l[i]) >= maxLen:
+					print classList[l[i][j]]
+			
+def loadData(track, data):
+	trackInfo = {'Basics':
+		  ['cs100','cs101','cs105','cs125','cs126','cs173','cs196','cs199','cs210','cs225','cs233','cs241','cs242',
+		  'cs296','cs357','cs361','cs374'],
+		  'Software Foundations':
+		  ['cs422','cs426','cs427','cs428','cs429','cs476','cs477','cs492','cs493','cs494','cs498 Software Testing','cs522','cs524','cs526','cs527','cs528','cs576'],
+		  'Algorithms and Models of Computation':
+		  ['cs413','cs473','cs475','cs476','cs477','cs481','cs482','cs571','cs572','cs573','cs574','cs575','cs576','cs579','cs583',
+		  'cs584'],
+		  'Intelligence and Big Data':
+		  ['cs410','cs411','cs412','cs414','cs440','cs443','cs445','cs446','cs447','cs466','cs467','cs510','cs511','cs512','cs543',
+		  'cs544','cs546','cs548','cs566','cs576','cs598 Mach Lrng for Signal Processng'],
+		  'Human and Social Impact':
+		  ['cs416','cs460','cs461','cs463','cs465','cs467','cs468','cs498 Art and Science of Web Prog','cs498RK','cs563','cs565'],
+		  'Media':
+		  ['cs414','cs418','cs419','cs445','cs465','cs467','cs498 Virtual Reality','cs519','cs565','cs598 Mach Lrng for Signal Processng'],
+		  'Scientific, Parallel, and High Performance Computing':
+		  ['cs419','cs450','cs457','cs466','cs482','cs483','cs484','cs519','cs554','cs555','cs556','cs558'],
+		  'Distributed Systems, Networking, and Security':
+		  ['cs423','cs424','cs425','cs431','cs436','cs438','cs439','cs460','cs461','cs463','cs483','cs484','cs523','cs524','cs525',
+		  'cs538','cs563'],
+		  'Machines':
+		  ['cs423','cs424','cs426','cs431','cs433','cs484','cs523','cs526','cs533','cs536','cs541','cs584','cs598 Parallel Programming'],
+		  'Group Project':
+		  ['cs427','cs428','cs429','cs445','cs465','cs467','cs493','cs494']}
+	track = "Human and Social Impact"
+	theta = 0.2
+	epsilon = 0.2
 	sequence = []
-	with open(filename,"r") as f:
-		i = 0
-		for line in f:
-			if i == 0:
-				temp = line[0:len(line)-1].split(",")
-				theta = float(temp[0])
-				epsilon = float(temp[1])
-				i+=1
+	term_dict = {}
+	classList = []
+	data = data.split("\n")
+		for line in data:
+			if line == "":
+				break
+			# line = line[0:len(line)-1]
+			line = line.split(";")
+			term = line[0]
+			c = line[1][0:6].lower()
+			c = c.replace(" ","")
+			# print(c)
+			if c == "cs498" or c == "cs598" or c == "cs398" or (c not in trackInfo[track]):
+				continue
 			else:
-				if line != "\n" and line != "":
-					temp = line[0:len(line)-1].split(",")
-					append = []
-					for i in range(len(temp)):
-						append.append(int(temp[i]))
-					sequence.append(append)
-	return theta, epsilon, sequence
+				if line[1] not in classList:
+					classList.append(c)
+				if term not in term_dict:
+					term_dict[term] = [(classList.index(c), int(line[3]))]
+				else:
+					term_dict[term].append((classList.index(c), int(line[3])))
+	for term in term_dict:
+		classes = term_dict[term]
+		classes.sort(key=lambda tup: tup[1], reverse = True)
+		temp = []
+		for tup in classes:
+			temp.append(tup[0])
+		sequence.append(temp)
+		# print(classes)
+	# return
+	# with open(filename,"r") as f:
+	# 	i = 0
+	# 	for line in f:
+	# 		if i == 0:
+	# 			temp = line[0:len(line)-1].split(",")
+	# 			theta = float(temp[0])
+	# 			epsilon = float(temp[1])
+	# 			i+=1
+	# 		else:
+	# 			if line != "\n" and line != "":
+	# 				temp = line[0:len(line)-1].split(",")
+	# 				append = []
+	# 				for i in range(len(temp)):
+	# 					append.append(int(temp[i]))
+	# 				sequence.append(append)
+	# print(sequence)
+	return theta, epsilon, sequence, classList
 
-def frequentSequence(frequent, outlierMin):
+def frequentSequence(frequent, outlierMin, classList):
 	global numSequence
 	global theta
 	global epsilon
@@ -54,7 +123,7 @@ def frequentSequence(frequent, outlierMin):
 	# print outlierMin
 	otherScan(frequent, outlierMin)
 	# print "finish second"
-	printFormat(outlierMin)
+	printFormat(outlierMin, classList)
 	return
 def firstScan(frequent, outlierMin):
 	global sequence
@@ -247,10 +316,11 @@ def patternMining():
 	global sequence
 	outlierMin = []
 	frequent = []
-
-	theta, epsilon, sequence = loadData("data.txt")
+	track = sys.argv[1]
+	data = sys.argv[2]
+	theta, epsilon, sequence, classList = loadData(track, data)
 	numSequence = float(len(sequence))
-	frequentSequence(frequent, outlierMin)
+	frequentSequence(frequent, outlierMin, classList)
 	return
 
 if __name__ == "__main__":

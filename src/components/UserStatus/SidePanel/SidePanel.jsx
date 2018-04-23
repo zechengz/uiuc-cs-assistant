@@ -129,6 +129,7 @@ class SidePanel extends Component {
   async componentDidMount() {
     const { cookies } = this.props;
     let email = cookies.get('login');
+    let user;
     email = unescape(email);
     console.log('in SidePanel: ' + email);
     if (email) {
@@ -144,12 +145,12 @@ class SidePanel extends Component {
         console.error(error);
       });
       // end read csv file
-      axios.get('api/user/info', {
+      await axios.get('api/user/info', {
         params: {
           email: email
         }
       }).then((response) => {
-        let user = response.data.data[0];
+        user = response.data.data[0];
         user.classTaken = takenCourse;
         let takeClasses = user.classTaken.length;
         console.log('in SidePanel: track:' + user.direction);
@@ -179,7 +180,20 @@ class SidePanel extends Component {
         console.log('in SidePanel');
         console.error(error);
       });
-
+      console.log(this.state.user.direction);
+      console.log('adv3');
+      axios.get('/api/user/getAdv3', {
+        params: {
+          direction: user.direction
+        }
+      }).then((response) => {
+        let data = response.data.data[0];
+        // console.log(data);
+        data = data.split(';');
+        this.setState({ adv1: data });
+      }).catch((error) => {
+        console.error(error);
+      });
     }
   }
 

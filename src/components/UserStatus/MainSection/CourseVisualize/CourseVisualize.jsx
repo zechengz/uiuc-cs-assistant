@@ -121,7 +121,7 @@ class CourseVisualize extends Component {
     function readTextFile(file) {
       var ret = {};
       var rawFile = new XMLHttpRequest();
-      rawFile.open("GET", file, false);
+      rawFile.open("GET", file, true);
       rawFile.onreadystatechange = function () {
         if (rawFile.readyState === 4) {
           if (rawFile.status === 200 || rawFile.status == 0) {
@@ -161,9 +161,9 @@ class CourseVisualize extends Component {
     for (var i=index2; i < number.length; i++){
       three.push(number[i]);
     }
-    console.log(one); // lowest
-    console.log(two); //
-    console.log(three); // high
+    // console.log(one); // lowest
+    // console.log(two); //
+    // console.log(three); // high
 
     let low = {};
     let mid = {};

@@ -33,7 +33,7 @@ def printFormat(l, classList):
 					print classList[l[i][j]]+",",
 				elif len(l[i]) >= maxLen:
 					print classList[l[i][j]]
-			
+
 def loadData(track, data):
 	trackInfo = {'Basics':
 		  ['cs100','cs101','cs105','cs125','cs126','cs173','cs196','cs199','cs210','cs225','cs233','cs241','cs242',
@@ -66,24 +66,24 @@ def loadData(track, data):
 	term_dict = {}
 	classList = []
 	data = data.split("\n")
-		for line in data:
-			if line == "":
-				break
+	for line in data:
+		if line == "":
+			break
 			# line = line[0:len(line)-1]
-			line = line.split(";")
-			term = line[0]
-			c = line[1][0:6].lower()
-			c = c.replace(" ","")
-			# print(c)
-			if c == "cs498" or c == "cs598" or c == "cs398" or (c not in trackInfo[track]):
-				continue
+		line = line.split(";")
+		term = line[0]
+		c = line[1][0:6].lower()
+		c = c.replace(" ","")
+		# print(c)
+		if c == "cs498" or c == "cs598" or c == "cs398" or (c not in trackInfo[track]):
+			continue
+		else:
+			if line[1] not in classList:
+				classList.append(c)
+			if term not in term_dict:
+				term_dict[term] = [(classList.index(c), int(line[3]))]
 			else:
-				if line[1] not in classList:
-					classList.append(c)
-				if term not in term_dict:
-					term_dict[term] = [(classList.index(c), int(line[3]))]
-				else:
-					term_dict[term].append((classList.index(c), int(line[3])))
+				term_dict[term].append((classList.index(c), int(line[3])))
 	for term in term_dict:
 		classes = term_dict[term]
 		classes.sort(key=lambda tup: tup[1], reverse = True)
@@ -281,7 +281,7 @@ def scanBaseToCheck(candidate, outlierMin):
 			# print true_false
 			if true_false == True and (candidate[i] not in outlierMin):
 				outlierMin.append(candidate[i])
-			
+
 	return new_ret
 
 def candidate(x,y, newone, frequent):

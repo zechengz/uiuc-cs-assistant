@@ -21,7 +21,6 @@ require('babel-polyfill');
 
 router.get('/getAdv1', async function(req, res) {
 	let class_data = undefined;
-	// const class_name = 'CS 125 Intro to Computer Science';
 	await mysqldb.query(sql.getAllClassRecord, (err, result) => {
 		if (err) {
 			console.log('Error On Get Enrolled Class');
@@ -82,6 +81,63 @@ router.get('/getAdv2', function(req, res) {
 			}
 		});
 	}).then((result) => {
+		return res.status (200).send ({
+			message: 'OK',
+			data: result
+		});
+	}).catch((error) => {
+		console.error(error);
+		return res.status (500).send ({
+			message: serverErrorMsg,
+			data: null
+		});
+	});
+});
+
+router.get('/getAdv3', async function(req, res) {
+	let class_data = undefined;
+	await new Promise((resolve, reject) => {
+		mysqldb.query(sql.getAllClassRecord, (err, result) => {
+			if (err) {
+				reject(err);
+			} else {
+				resolve(result);
+			}
+		})
+	}).then(result => {
+		console.log('We have the data.');
+		var data = '';
+		for (var i = 0; i < result.length; i++) {
+			var str = '';
+			var item = result[i];
+			str += item.yearTerm + ';';
+			str += item.class + ';';
+			str += item.instructor + ';';
+			str += item.studentNum.toString() + ';';
+			str += item.aveGPA.toString() + '\n';
+			data += str;
+		}
+		class_data = data;
+	}).catch(error => {
+		console.log('Error On Get Enrolled Class');
+		console.error(err);
+		return res.status (500).send ({
+			message: serverErrorMsg,
+			data: null
+		});
+	});
+	new Promise((resolve, reject) => {
+		PythonShell.run('./backend/py/frequentPattern.py', {
+			args: [req.query.direction, class_data],
+		}, (error, result) => {
+			if (error) {
+				reject(error);
+			} else {
+				resolve(result);
+			}
+		});
+	}).then((result) => {
+		console.log(result[0]);
 		return res.status (200).send ({
 			message: 'OK',
 			data: result

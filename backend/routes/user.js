@@ -21,29 +21,35 @@ require('babel-polyfill');
 
 router.get('/getAdv1', async function(req, res) {
 	let class_data = undefined;
-	await mysqldb.query(sql.getAllClassRecord, (err, result) => {
-		if (err) {
-			console.log('Error On Get Enrolled Class');
-			console.error(err);
-			return res.status (500).send ({
-				message: serverErrorMsg,
-				data: null
-			});
-		} else {
-			console.log('We have the data.');
-			var data = '';
-			for (var i = 0; i < result.length; i++) {
-				var str = '';
-				var item = result[i];
-				str += item.yearTerm + ';';
-				str += item.class + ';';
-				str += item.instructor + ';';
-				str += item.studentNum.toString() + ';';
-				str += item.aveGPA.toString() + '\n';
-				data += str;
+	await new Promise((resolve, reject) => {
+		mysqldb.query(sql.getAllClassRecord, (err, result) => {
+			if (err) {
+				reject(err);
+			} else {
+				resolve(result);
 			}
-			class_data = result;
+		})
+	}).then(result => {
+		console.log('We have the data.');
+		var data = '';
+		for (var i = 0; i < result.length; i++) {
+			var str = '';
+			var item = result[i];
+			str += item.yearTerm + ';';
+			str += item.class + ';';
+			str += item.instructor + ';';
+			str += item.studentNum.toString() + ';';
+			str += item.aveGPA.toString() + '\n';
+			data += str;
 		}
+		class_data = data;
+	}).catch(error => {
+		console.log('Error On Get Enrolled Class');
+		console.error(err);
+		return res.status (500).send ({
+			message: serverErrorMsg,
+			data: null
+		});
 	});
 	new Promise((resolve, reject) => {
 		PythonShell.run('./backend/py/hin.py', {
@@ -69,10 +75,41 @@ router.get('/getAdv1', async function(req, res) {
 	});
 });
 
-router.get('/getAdv2', function(req, res) {
+router.get('/getAdv2', async function(req, res) {
+	let class_data = undefined;
+	await new Promise((resolve, reject) => {
+		mysqldb.query(sql.getAllClassRecord, (err, result) => {
+			if (err) {
+				reject(err);
+			} else {
+				resolve(result);
+			}
+		})
+	}).then(result => {
+		console.log('We have the data.');
+		var data = '';
+		for (var i = 0; i < result.length; i++) {
+			var str = '';
+			var item = result[i];
+			str += item.yearTerm + ';';
+			str += item.class + ';';
+			str += item.instructor + ';';
+			str += item.studentNum.toString() + ';';
+			str += item.aveGPA.toString() + '\n';
+			data += str;
+		}
+		class_data = data;
+	}).catch(error => {
+		console.log('Error On Get Enrolled Class');
+		console.error(err);
+		return res.status (500).send ({
+			message: serverErrorMsg,
+			data: null
+		});
+	});
 	new Promise((resolve, reject) => {
 		PythonShell.run('./backend/py/hin1.py', {
-			args: req.query.direction,
+			args: [req.query.direction, class_data],
 		}, (error, result) => {
 			if (error) {
 				reject(error);
@@ -137,7 +174,62 @@ router.get('/getAdv3', async function(req, res) {
 			}
 		});
 	}).then((result) => {
-		console.log(result[0]);
+		return res.status (200).send ({
+			message: 'OK',
+			data: result
+		});
+	}).catch((error) => {
+		console.error(error);
+		return res.status (500).send ({
+			message: serverErrorMsg,
+			data: null
+		});
+	});
+});
+
+router.get('/getAdv4', async function(req, res) {
+	let class_data = undefined;
+	await new Promise((resolve, reject) => {
+		mysqldb.query(sql.getAllClassRecord, (err, result) => {
+			if (err) {
+				reject(err);
+			} else {
+				resolve(result);
+			}
+		})
+	}).then(result => {
+		console.log('We have the data.');
+		var data = '';
+		for (var i = 0; i < result.length; i++) {
+			var str = '';
+			var item = result[i];
+			str += item.yearTerm + ';';
+			str += item.class + ';';
+			str += item.instructor + ';';
+			str += item.studentNum.toString() + ';';
+			str += item.aveGPA.toString() + '\n';
+			data += str;
+		}
+		class_data = data;
+	}).catch(error => {
+		console.log('Error On Get Enrolled Class');
+		console.error(err);
+		return res.status (500).send ({
+			message: serverErrorMsg,
+			data: null
+		});
+	});
+	new Promise((resolve, reject) => {
+		PythonShell.run('./backend/py/frequentPattern1.py', {
+			args: [req.query.direction, class_data],
+		}, (error, result) => {
+			if (error) {
+				reject(error);
+			} else {
+				resolve(result);
+			}
+		});
+	}).then((result) => {
 		return res.status (200).send ({
 			message: 'OK',
 			data: result
@@ -393,6 +485,7 @@ router.post('/goals', function(req, res) {
 	}
 });
 
+// update sunday 22
 router.get ("/info", function (req, res) {
 	if (req.query.partialName !== undefined) {
 		console.log('partial');
@@ -417,14 +510,16 @@ router.get ("/info", function (req, res) {
 		} else { // email exist
 			var usrEmail = req.body.email;
 		}
-
+		console.log('Getting user info. Email: ' + usrEmail);
 		mysqldb.query(sql.find_user_password, { u_email: usrEmail }, (err, user) => {
 			if (err) {
+				console.error('Database error, return status code - 500...');
 				return res.status (500).send ({
 					message: serverErrorMsg,
 					data: null
 				});
 			} else if (user.length === 0) {
+				console.error('Did not find any user infomation, return status code - 404...');
 				return res.status (404).send ({
 					message: notFoundMsg,
 					data: null

@@ -28,3 +28,11 @@ Group project of creating a website on helping UIUC CS students decide and manag
 
 ## Current Hosting Website
 * [Link to the hosting website](http://csassistant.web.engr.illinois.edu:55555/)
+
+## Data
+* Thanks Professor Wade's data on UIUC class information.
+* [Here is the link to the dataset](https://github.com/wadefagen/datasets)
+
+## Other Useful UIUC Class Website
+* [Grade disparity between sections at UIUC](http://waf.cs.illinois.edu/discovery/grade_disparity_between_sections_at_uiuc/)
+* [iWantA+](https://iwanta.plus/)

@@ -8,6 +8,13 @@ Group project of creating a website on helping UIUC CS students decide and manag
 3. Contiguous frequent pattern mining function to extract patterns for classes based on their GPA and number of registered students.
 4. Users can check the average GPA for their own tracks, manage their own track classes and check their own progress on the tracks.
 
+## Languages and Packages
+1. React.js
+2. Express.js
+3. SCSS
+4. Python
+5. SQL
+6. Node.js
 
 ## Setup Guide
 1. Install node.js modules (at least once): `npm install`

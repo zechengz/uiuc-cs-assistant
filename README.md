@@ -7,6 +7,7 @@ Group project of creating a website on helping UIUC CS students decide and manag
 2. A simple bi-typed heterogeneous information network to rank professors and classes.
 3. Contiguous frequent pattern mining function to extract patterns for classes based on their GPA and number of registered students.
 4. Users can check the average GPA for their own tracks, manage their own track classes and check their own progress on the tracks.
+5. Other small but interesting functions.
 
 ## Languages and Packages
 1. React.js

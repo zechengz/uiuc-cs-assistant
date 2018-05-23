@@ -6,6 +6,7 @@ Group project of creating a website on helping UIUC CS students decide and manag
 1. Search classes where students can see average GPA, number of As, Bs etc. for the classes.
 2. A simple bi-typed heterogeneous information network to rank professors and classes.
 3. Contiguous frequent pattern mining function to extract patterns for classes based on their GPA and number of registered students.
+4. Users can check the average GPA for their own tracks, manage their own track classes and check their own progress on the tracks.
 
 
 ## Setup Guide

@@ -22,5 +22,8 @@ Group project of creating a website on helping UIUC CS students decide and manag
 3. Open [http://localhost:55555/](http://localhost:55555/) in the browser
 4. `Ctrl-C` in terminal to stop server at anytime
 
+## Report
+* [Link to report](https://drive.google.com/file/d/1KGRRzm-UL7vFbp7lt5DvGVlx0PMpM8L7/view?usp=sharing)
+
 ## Current Hosting Website
 * [Link to the hosting website](http://csassistant.web.engr.illinois.edu:55555/)
